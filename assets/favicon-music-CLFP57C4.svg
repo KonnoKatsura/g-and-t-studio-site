@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Listening Room favicon">
+  <defs>
+    <radialGradient id="musicGlow" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#fff1c2"/>
+      <stop offset="45%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#101a30"/>
+    </radialGradient>
+    <linearGradient id="musicNote" x1="16" x2="47" y1="14" y2="52">
+      <stop offset="0%" stop-color="#ffe38f"/>
+      <stop offset="54%" stop-color="#5fc8da"/>
+      <stop offset="100%" stop-color="#b561f4"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#080b1e"/>
+  <circle cx="32" cy="34" r="24" fill="url(#musicGlow)" opacity="0.28"/>
+  <path d="M39 13v29c0 5-5 9-11 9-5 0-9-3-9-7s4-7 9-7c3 0 5 1 7 2V18l18-4v8l-14 3Z" fill="url(#musicNote)"/>
+  <path d="M19 23h11M16 30h9M45 34h7" stroke="#fff8cf" stroke-width="2.5" stroke-linecap="round" opacity="0.78"/>
+  <path d="M16 14l1.8 3.6 3.9 1.8-3.9 1.8L16 25l-1.8-3.8-3.9-1.8 3.9-1.8L16 14Zm37 29 1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5 1.5-3Z" fill="#ffe38f"/>
+</svg>

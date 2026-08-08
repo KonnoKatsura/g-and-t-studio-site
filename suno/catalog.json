@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "kind": "suno-public-listening-catalog",
+  "records": [
+    {
+      "id": "suno-7019f5fd8603",
+      "sourceId": "ai-music/ai-cyber-songwriter",
+      "title": "AI Cyber Songwriter",
+      "indexTitle": "AI Cyber Songwriter",
+      "world": "ai-music",
+      "tags": [
+        "AI Music",
+        "Suno"
+      ],
+      "status": "公開中",
+      "image": "./public/suno/ai-music/ai-cyber-songwriter/artwork/cover.png",
+      "audio": "./public/suno/ai-music/ai-cyber-songwriter/audio/ai-cyber-songwriter.mp3",
+      "description": "Suno公開コピーから自動登録されたレコード。",
+      "links": [],
+      "publicCopy": true
+    },
+    {
+      "id": "suno-92b962942de1",
+      "sourceId": "original/コーヒーが冷めるまで",
+      "title": "コーヒーが冷めるまで",
+      "indexTitle": "コーヒーが冷めるまで",
+      "world": "original",
+      "tags": [
+        "Original",
+        "Suno"
+      ],
+      "status": "公開中",
+      "image": "./public/suno/original/コーヒーが冷めるまで/artwork/cover.png",
+      "audio": "./public/suno/original/コーヒーが冷めるまで/audio/コーヒーが冷めるまで.mp3",
+      "description": "Suno公開コピーから自動登録されたレコード。",
+      "links": [],
+      "publicCopy": true
+    },
+    {
+      "id": "suno-d26c225e683c",
+      "sourceId": "original/幸せな檻",
+      "title": "幸せな檻",
+      "indexTitle": "幸せな檻",
+      "world": "original",
+      "tags": [
+        "Original",
+        "Suno"
+      ],
+      "status": "公開中",
+      "image": "./public/images/notes-blog-card.png",
+      "audio": "./public/suno/original/幸せな檻/audio/5e78-305b-306a-6abb.mp3",
+      "description": "Suno公開コピーから自動登録されたレコード。",
+      "links": [],
+      "publicCopy": true
+    }
+  ]
+}

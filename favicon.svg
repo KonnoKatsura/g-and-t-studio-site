@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="G&amp;T Studio lantern">
+  <rect width="64" height="64" rx="14" fill="#071326"/>
+  <circle cx="32" cy="35" r="19" fill="#1a2f28"/>
+  <path d="M22 22c0-8 20-8 20 0" fill="none" stroke="#e1bd62" stroke-width="4" stroke-linecap="round"/>
+  <path d="M21 27h22l-3 25H24z" fill="#20160f" stroke="#e1bd62" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M25 27h14M25 52h14" stroke="#fff1ad" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <path d="M32 28v24" stroke="#9f7426" stroke-width="2" opacity=".8"/>
+  <path d="M32 34c5 5 6 11 0 15-6-4-5-10 0-15z" fill="#ffe38f"/>
+  <path d="M32 37c2 4 2 7 0 10-3-2-3-6 0-10z" fill="#fff9df"/>
+  <circle cx="32" cy="42" r="15" fill="#ffd86a" opacity=".16"/>
+  <path d="M26 18h12M28 14h8" stroke="#e1bd62" stroke-width="3" stroke-linecap="round"/>
+</svg>

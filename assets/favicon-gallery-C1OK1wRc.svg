@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gallery favicon">
+  <rect width="64" height="64" rx="14" fill="#1c1824"/>
+  <rect x="14" y="17" width="36" height="30" rx="4" fill="#2f2118" stroke="#e1bd62" stroke-width="3"/>
+  <path d="M19 41l9-10 7 7 5-5 6 8H19Z" fill="#5fc8da" opacity=".78"/>
+  <circle cx="40" cy="26" r="4" fill="#ffe38f"/>
+  <path d="M25 52h14" stroke="#e1bd62" stroke-width="3" stroke-linecap="round"/>
+  <path d="M15 12l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5 1.5-3Zm40 36 1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5 1.5-3Z" fill="#ffe38f"/>
+</svg>

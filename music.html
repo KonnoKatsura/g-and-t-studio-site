@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="G&T Studio Listening Roomは、Suno、DTM、AI Songwriterから生まれた音を聴く小さなレコード部屋です。"
+    />
+    <title>Listening Room | G&T Studio</title>
+    <link rel="icon" type="image/svg+xml" href="/g-and-t-studio-site/assets/favicon-music-CLFP57C4.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" crossorigin href="/g-and-t-studio-site/assets/styles-RLRClg9J.css">
+  </head>
+  <body class="musicPage" data-cursor-trail="music">
+    <main>
+      <header class="musicHero" id="top">
+        <div class="siteMenu" aria-label="ページメニュー">
+          <a class="siteMenuBrand" href="./preview.html#top">G&amp;T</a>
+          <input class="siteMenuSwitch" id="music-menu" type="checkbox" />
+          <label class="siteMenuButton" for="music-menu" aria-label="メニューを開く"><span aria-hidden="true">☰</span></label>
+          <nav class="siteMenuPanel" aria-label="ページナビゲーション">
+            <a class="siteMenuHome" href="./preview.html#top">HOME</a>
+            <span class="siteMenuHeading">WORLDS</span>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="./world-tree-forest-cafe/index.html#home">🌳 World Tree</a>
+            <a href="./shiro.html">🦊 Shiro Atelier</a>
+            <a href="./music.html">🎵 Listening Room</a>
+            <a href="./ai-lab.html">🧪 AI Lab</a>
+            <a href="./notes.html">🛠️ Studio Log</a>
+            <a href="./gallery.html">🧭 Works</a>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="./preview.html#socials">SNS</a>
+            <a href="./hearing.html#contact">Contact</a>
+          </nav>
+        </div>
+        <section class="musicHeroInner">
+          <p class="portalSubtitle">Turn the Record.</p>
+          <h1>Listening Room</h1>
+          <p>AIと音楽から生まれた、小さなレコード棚。</p>
+        </section>
+      </header>
+
+      <section class="musicSection musicFeatured" aria-label="Featured record">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Featured Record</p>
+          <h2>まず針を落とすなら</h2>
+        </div>
+        <div class="recordPlayerStage">
+          <div class="nowPlaying nowPlayingTop">
+            <span>Now Playing</span>
+            <strong>コーヒーが冷めるまで</strong>
+          </div>
+          <div class="audioConsole" aria-label="Listening Room audio console">
+            <div class="studioSpeaker studioSpeakerLeft" aria-hidden="true">
+              <span></span>
+              <i></i>
+            </div>
+            <div class="turntable" aria-label="Featured record player">
+              <div class="deckSurface" aria-hidden="true">
+                <div class="turntablePlatter">
+                  <span></span>
+                </div>
+                <div class="toneArm"></div>
+              </div>
+              <button class="turntablePower" type="button" aria-pressed="false">針を落とす</button>
+              <div class="turntableLabel">
+                <span>Now on the shelf</span>
+                <strong>コーヒーが冷めるまで</strong>
+                <small data-record-readiness>音源OK</small>
+              </div>
+            </div>
+            <div class="recordPlaybackControls" aria-label="レコード再生コントロール">
+              <div class="recordTimeRow">
+                <span data-record-current>0:00</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  step="0.1"
+                  aria-label="再生位置"
+                  data-record-progress
+                />
+                <span data-record-duration>0:00</span>
+              </div>
+              <label class="recordVolumeControl">
+                <span>Volume</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  value="0.8"
+                  step="0.01"
+                  aria-label="音量"
+                  data-record-volume
+                />
+              </label>
+              <p class="mobileVolumeHint">音量は本体ボタンで調整できます。</p>
+              <button class="dailyRecordButton" type="button" data-daily-record>
+                本日のおすすめへ
+              </button>
+            </div>
+            <div class="studioSpeaker studioSpeakerRight" aria-hidden="true">
+              <span></span>
+              <i></i>
+            </div>
+            <div class="tubeAmp" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="vuMeters" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="projectorWindow" aria-hidden="true">
+              <span>Original / Cafe / Ballad</span>
+              <figure>
+                <img src="/g-and-t-studio-site/assets/cover-D1GDFOgF.png" alt="" />
+              </figure>
+            </div>
+            <div class="dailyRecordMenu" aria-label="本日のお品書き">
+              <p>本日のお品書き</p>
+              <button type="button" data-record-id="coffee-until-cold">
+                <span>再生できます</span>
+                コーヒーが冷めるまで
+              </button>
+              <button type="button" data-record-id="catalog-ai-cyber-songwriter">
+                <span>準備中</span>
+                AI Cyber Songwriter
+              </button>
+              <button type="button" data-record-id="for-you">
+                <span>note準備中</span>
+                for YOU
+              </button>
+            </div>
+            <div class="recordSearchDesk consoleSearchDesk" aria-label="全曲検索">
+              <label>
+                <span>Search Records</span>
+                <input type="search" placeholder="曲名・世界・タグで探す" data-record-search />
+              </label>
+              <div class="recordStatusFilters" aria-label="状態フィルター" data-status-filters>
+                <button type="button" data-status="all" aria-pressed="true">All Status</button>
+                <button type="button" data-status="YouTube公開中">公開中</button>
+                <button type="button" data-status="PV制作中">PV制作中</button>
+                <button type="button" data-status="note準備中">note準備中</button>
+                <button type="button" data-status="制作中">制作中</button>
+                <button type="button" data-status="準備中">準備中</button>
+                <button type="button" data-record-reset>Reset</button>
+              </div>
+            </div>
+            <div class="consoleWorldShelves searchCatalogShelves" data-search-catalog></div>
+            <audio class="recordAudio" preload="metadata" data-record-audio>
+              <source src="/g-and-t-studio-site/assets/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%81%8C%E5%86%B7%E3%82%81%E3%82%8B%E3%81%BE%E3%81%A7-DiOc4zRf.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+      </section>
+
+      <section class="musicSection recordCollection" id="records" aria-label="Record shelf">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Record Shelf</p>
+          <h2>5つの音の棚</h2>
+          <p>世界ごとにレコードを分けて、増えても迷わない棚にしていきます。</p>
+        </div>
+        <p class="recordResultCount" data-record-count>All records on the shelf.</p>
+        <button class="mapBackButton" type="button" data-map-reset hidden>Back to shelves</button>
+        <div class="worldShelfGrid collectionWorldShelves" data-world-map></div>
+        <p class="recordEmptyState" data-record-empty hidden>この条件のレコードは、まだ棚に並んでいません。</p>
+      </section>
+
+      <section class="musicSection musicProcess musicLounge" id="process">
+        <div class="loungeScene" aria-hidden="true">
+          <span class="loungeLantern"></span>
+          <span class="loungeCoffee"></span>
+          <span class="loungeRecord"></span>
+        </div>
+        <div>
+          <p class="portalDeskLabel">Lounge Link</p>
+          <h2>AI Labへつながる制作メモ</h2>
+          <p>
+            レコードを聴き終えたら、少し休憩。制作過程、プロンプト、MV実験のメモはAI Labへ置いていきます。
+          </p>
+        </div>
+        <a href="./ai-lab.html">AI Labへ</a>
+      </section>
+
+      <footer class="siteFooter musicFooter">
+        <div>
+          <a class="footerBrand" href="./preview.html#top">G&amp;T</a>
+          <span>Listening Room is lovingly in progress.</span>
+        </div>
+        <nav aria-label="Music footer links">
+          <a href="#top">Top</a>
+          <a href="#records">Record Shelf</a>
+          <a href="./preview.html#chapters">Lanterns</a>
+        </nav>
+        <small>© 2026 G&T Studio. All sounds are experiments in progress.</small>
+      </footer>
+    </main>
+    <script src="./public/cursor-trails.js"></script>
+    <script src="./public/suno/catalog.js"></script>
+    <script src="./public/music-player.js"></script>
+  </body>
+</html>

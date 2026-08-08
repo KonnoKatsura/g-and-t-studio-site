@@ -1,0 +1,1205 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="G&T 開発室は、TとAIたちが今日も創作している小さなバーチャルオフィスです。"
+    />
+    <title>Studio Log | G&T</title>
+    <link rel="icon" type="image/svg+xml" href="/g-and-t-studio-site/assets/favicon-notes-C0l9y7SO.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" crossorigin href="/g-and-t-studio-site/assets/styles-RLRClg9J.css">
+  </head>
+  <body class="musicPage notesPage studioLogPage" data-cursor-trail="notes">
+    <main>
+      <header class="musicHero notesHero studioLogHero" id="top">
+        <div class="siteMenu" aria-label="ページメニュー">
+          <a class="siteMenuBrand" href="./preview.html#top">G&amp;T</a>
+          <input class="siteMenuSwitch" id="notes-menu" type="checkbox" />
+          <label class="siteMenuButton" for="notes-menu" aria-label="メニューを開く"><span aria-hidden="true">☰</span></label>
+          <nav class="siteMenuPanel" aria-label="ページナビゲーション">
+            <a class="siteMenuHome" href="./preview.html#top">HOME</a>
+            <span class="siteMenuHeading">WORLDS</span>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="./world-tree-forest-cafe/index.html#home">🌳 World Tree</a>
+            <a href="./shiro.html">🦊 Shiro Atelier</a>
+            <a href="./music.html">🎵 Listening Room</a>
+            <a href="./ai-lab.html">🧪 AI Lab</a>
+            <a href="./notes.html">🛠️ Studio Log</a>
+            <a href="./gallery.html">🧭 Showroom</a>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="./preview.html#socials">SNS</a>
+            <a href="./hearing.html#contact">Contact</a>
+          </nav>
+        </div>
+        <section class="musicHeroInner studioLogHeroInner">
+          <p class="portalSubtitle">Studio Log</p>
+          <h1>G&amp;T 開発室</h1>
+          <p>ページではなく、ひとつの部屋。TとAIたちが今日も創作している小さなバーチャルオフィスです。</p>
+          <section class="studioElevatorHall" aria-label="G&T 開発室 エレベーターホール">
+            <header>
+              <span>2F / ELEVATOR HALL</span>
+              <strong>どちらの世界へ向かいますか？</strong>
+            </header>
+            <div class="studioElevatorGrid">
+              <article class="studioElevator elevatorHuman" data-elevator="human" data-elevator-floor-target="1F">
+                <div class="studioElevatorIndicator"><span>HUMAN WORLD</span><strong data-elevator-floor>2</strong></div>
+                <div class="studioElevatorFrame">
+                  <div class="studioElevatorCabin"><span>G&amp;T</span><small>Portal Line</small></div>
+                  <div class="studioElevatorDoors" aria-hidden="true"><i></i><i></i></div>
+                </div>
+                <button type="button" data-elevator-call><span>◉</span><strong>人間界専用</strong><small data-elevator-status>CALL</small></button>
+                <a href="./preview.html#top" data-elevator-destination>人間界へ到着 →</a>
+              </article>
+
+              <article class="studioElevator elevatorForest" data-elevator="forest" data-elevator-floor-target="TREE">
+                <div class="studioElevatorIndicator"><span>WORLD TREE</span><strong data-elevator-floor>🌙</strong></div>
+                <div class="studioElevatorFrame">
+                  <div class="studioElevatorCabin"><span>🌳</span><small>Forest Lift</small></div>
+                  <div class="studioElevatorDoors" aria-hidden="true"><i></i><i></i></div>
+                  <div class="studioElevatorGate" aria-hidden="true"></div>
+                </div>
+                <button type="button" data-elevator-call><span>◆</span><strong>世界樹の森専用</strong><small data-elevator-status>CALL</small></button>
+                <a href="./world-tree-forest-cafe/index.html" data-elevator-destination>世界樹の森へ到着 →</a>
+              </article>
+            </div>
+            <div class="studioFloorQuickNav" aria-label="全館フロア案内板へ移動">
+              <button type="button" data-floor-nav="1F"><span>1F</span>公開フロア</button>
+              <button type="button" data-floor-nav="2F"><span>2F</span>開発室</button>
+              <button type="button" data-floor-nav="B1"><span>B1</span>試作室</button>
+              <button type="button" data-floor-nav="TREE"><span>🌳</span>世界樹</button>
+            </div>
+            <p class="studioFloorArrival" data-floor-arrival aria-live="polite">2F 開発室で待機中です。</p>
+          </section>
+        </section>
+      </header>
+
+      <div class="musicSection studioZoneMarker studioZoneArrival" aria-label="開発室 到着エリア">
+        <span>01 / ARRIVAL</span>
+        <strong>2F G&amp;T Development Office</strong>
+        <small>受付・入館証・今日のデスク</small>
+      </div>
+
+      <section class="musicSection preopenCountdown" aria-label="World Tree Forest Cafe 公開前再点検の状況">
+        <div>
+          <span>🌳 WTFC Public Review</span>
+          <strong>安全確認中</strong>
+        </div>
+        <p>公開日は再点検後に決定</p>
+      </section>
+
+      <section class="musicSection studioHeroDesk studioCreedDeck" aria-label="開発室入口ボード">
+        <article class="studioHeroCreed">
+          <span>社訓</span>
+          <p>良いアイデアは歓迎。実装は順番に。8割完成を大切に。コーヒーは惜しまない。</p>
+        </article>
+        <div class="studioHeroNotes" aria-label="入口の付箋">
+          <a href="#today">🌳 今日の開発室</a>
+          <a href="https://note.com/kon_0320">☕ note</a>
+          <a href="#studio-team-chat">💬 チャット</a>
+        </div>
+      </section>
+
+      <section class="musicSection studioVisitorPass" aria-label="G&T 開発室 仮入館証">
+        <div class="studioVisitorForm">
+          <span>🚪 One-Day Studio Pass</span>
+          <strong>仮入館証を発行</strong>
+          <label>
+            <span>Name</span>
+            <input type="text" value="Kon" maxlength="18" data-visitor-name-input />
+          </label>
+          <label>
+            <span>Guide</span>
+            <select data-visitor-guide-select>
+              <option value="shiro">🦊 Shiro + 店長さん</option>
+              <option value="glimmerpou">🌳 glimmerpou + ShadowMogu</option>
+            </select>
+          </label>
+        </div>
+        <div class="studioVisitorCard" aria-live="polite">
+          <span>G&amp;T Studio</span>
+          <strong>VISITOR</strong>
+          <p data-visitor-name>Kon</p>
+          <small>Guide / <b data-visitor-guide>🦊 Shiro</b></small>
+        </div>
+      </section>
+
+      <section class="musicSection studioMiniOffice" aria-label="G&T 開発室 デスク配置図">
+        <header>
+          <span>OFFICE FLOOR 2F</span>
+          <strong>今日のデスク配置</strong>
+          <small>気になる机を押してみる</small>
+        </header>
+        <div class="studioMiniOfficeWindow" aria-hidden="true">🌳 World Tree side window</div>
+        <div class="studioMiniOfficeFloor">
+          <button class="studioMiniDesk deskT" type="button" data-office-desk="t"><span>👩</span><strong>T</strong><small>Creative</small></button>
+          <button class="studioMiniDesk deskG" type="button" data-office-desk="g"><span>🤖</span><strong>G</strong><small>Planning</small></button>
+          <button class="studioMiniDesk deskKo" type="button" data-office-desk="ko"><span>💻</span><strong>こーちゃん</strong><small>Build</small></button>
+          <button class="studioMiniDesk deskAndrew" type="button" data-office-desk="andrew"><span>🧠</span><strong>Andrew</strong><small>Research</small></button>
+          <button class="studioMiniDesk deskClaude" type="button" data-office-desk="claude"><span>🧘</span><strong>くーちゃん</strong><small>Review</small></button>
+          <button class="studioMiniDesk deskP" type="button" data-office-desk="p"><span>🔍</span><strong>P</strong><small>Library</small></button>
+          <a class="studioMiniCoffee" href="#studio-cafe-counter"><span>☕</span><strong>Coffee Counter</strong><small>まず一杯</small></a>
+          <span class="studioMiniPlant" aria-hidden="true">🪴</span>
+          <span class="studioMiniDoor" aria-hidden="true">🚪</span>
+        </div>
+        <p class="studioMiniOfficeStatus" data-office-status aria-live="polite"><strong>OPEN OFFICE</strong><span>今日は誰の机から見ますか？</span></p>
+      </section>
+
+      <nav class="musicSection studioRoomMap" aria-label="G&T 開発室 見取り図">
+        <span>🗺 Studio Map</span>
+        <strong>今日の見学ルート</strong>
+        <div>
+          <a href="#studio-cafe-counter">カフェカウンター</a>
+          <a href="#today">今日の開発室</a>
+          <a href="#team-calendar">Team Calendar</a>
+          <a href="#studio-team-chat">開発室チャット</a>
+        </div>
+      </nav>
+
+      <section class="musicSection studioRefreshmentDeck studioPublicCafeCounter" id="studio-cafe-counter" aria-label="G&T 開発室 カフェカウンター">
+          <div class="coffeeMemo studioCafeMenu" data-cafe-menu aria-label="開発室カフェメニュー">
+            <div class="studioCafeIcons" role="tablist" aria-label="開発室カフェ切り替え">
+              <button type="button" class="is-active" role="tab" aria-selected="true" aria-controls="studio-cafe-drink" data-cafe-tab="drink">☕</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="studio-cafe-snack" data-cafe-tab="snack">🥧</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="studio-cafe-member" data-cafe-tab="member">🤖</button>
+            </div>
+            <div class="studioCafeMain studioCafePanel is-active" id="studio-cafe-drink" role="tabpanel" data-cafe-panel="drink">
+              <span>☕ Coffee Counter</span>
+              <strong data-cafe-drink>アイスコーヒー</strong>
+              <p data-cafe-description>ホワイトボード前の定番メニュー。</p>
+            </div>
+            <div class="studioCafeSnack studioCafePanel" id="studio-cafe-snack" role="tabpanel" data-cafe-panel="snack" data-cafe-snack hidden>
+              <span>🥧 本日のおやつ</span>
+              <strong data-cafe-snack-name>アップルパイセット</strong>
+              <p data-cafe-snack-description>コーヒーのお供。</p>
+            </div>
+            <div class="studioCafePick studioCafePanel" id="studio-cafe-member" role="tabpanel" data-cafe-panel="member" hidden>
+              <span>🤖 メンバーおすすめ</span>
+              <strong data-cafe-member-pick>こーちゃん：ブラック（無糖）</strong>
+              <p data-cafe-member-description>差分チェック中に飲んでそうなやつ。</p>
+              <div class="studioCafeMembers" aria-label="メンバーおすすめ切り替え">
+                <button type="button" data-cafe-member="t">👩</button>
+                <button type="button" data-cafe-member="g">🤖</button>
+                <button type="button" data-cafe-member="ko">💻</button>
+                <button type="button" data-cafe-member="andrew">🧠</button>
+                <button type="button" data-cafe-member="claude">🧘</button>
+                <button type="button" data-cafe-member="p">🔍</button>
+              </div>
+            </div>
+          </div>
+
+          <section class="studioCapsuleStation" data-capsule-station aria-label="G&T Capsule Station">
+            <div class="studioCapsuleIntro">
+              <span>☕ G&amp;T Capsule Station</span>
+              <strong>WTFCから経費レンタル中のカプセルマシン</strong>
+              <p>カプセルを選んでBREW。たまに、よくわからないラテアートが出ます。</p>
+            </div>
+            <div class="studioCapsuleControls">
+              <label>
+                <span>Capsule</span>
+                <select data-capsule-select>
+                  <option value="css">CSS Latte</option>
+                  <option value="debug">Debug Espresso</option>
+                  <option value="merge">Merge Mocha</option>
+                  <option value="forest">Forest Blend</option>
+                  <option value="summer">Summer Light</option>
+                </select>
+              </label>
+              <button type="button" data-capsule-brew>BREW</button>
+            </div>
+            <div class="studioCapsuleCup" aria-live="polite">
+              <span data-capsule-art>☕</span>
+              <strong data-capsule-name>抽出待ち</strong>
+              <p data-capsule-status>カプセルを選んで、BREWを押してください。</p>
+              <i data-capsule-progress aria-hidden="true"></i>
+            </div>
+          </section>
+      </section>
+
+      <div class="musicSection studioZoneMarker studioZoneToday" aria-label="開発室 今日の実務ボード">
+        <span>02 / TODAY BOARD</span>
+        <strong>今日 / タスク / 投函口 / 予定 / 完了</strong>
+        <small>Tはここを見れば今日の作業へ戻れます</small>
+      </div>
+
+      <section class="musicSection studioLogRoom" id="today" aria-label="今日の開発室">
+        <div class="studioWhiteboard">
+          <div class="studioBoardHeader">
+            <p class="portalDeskLabel">Today in the Studio</p>
+            <h2>今日の開発室</h2>
+            <time datetime="2026-08-03">2026.08.03</time>
+          </div>
+
+          <section class="studioOpsPanel studioOpsTabs" data-studio-ops-tabs aria-label="今日の開発室オペレーション">
+            <div class="studioOpsTabList" role="tablist" aria-label="開発室オペレーション切り替え">
+              <button type="button" class="is-active" role="tab" aria-selected="true" aria-controls="studio-ops-today" data-studio-ops-tab="today">今日</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="studio-ops-pending" data-studio-ops-tab="pending">タスク</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="studio-ops-inbox" data-studio-ops-tab="inbox">今日の投函口</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="studio-ops-schedule" data-studio-ops-tab="schedule">予定</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="studio-ops-done" data-studio-ops-tab="done">今日できた棚</button>
+            </div>
+
+            <article class="studioOpsCard studioOpsToday studioOpsTabPanel is-active" id="studio-ops-today" role="tabpanel" data-studio-ops-panel="today">
+              <span>☀ Today Dashboard</span>
+              <strong>今日見るところ</strong>
+              <p>全部を広げず、次にやる3つと重要なお知らせだけを表示します。</p>
+              <div class="studioTodayColumns">
+                <section>
+                  <h3>次にやる3つ</h3>
+                  <ol>
+                    <li>虹工房：Main Version / Stem Set / Shorts Projectのdry-run設計</li>
+                    <li>Suno：407曲を変更せず、同名Stemとバージョン候補を可視化</li>
+                    <li>公開前再点検：Private混入・リンク・スマホ表示を確認</li>
+                  </ol>
+                </section>
+                <aside>
+                  <h3>重要なお知らせ</h3>
+                  <p>Sunoブラウザ版の目次録はGが担当。こーちゃんは既存407曲を動かさず、新しい作品・Stem構造のdry-runから再開します。</p>
+                </aside>
+              </div>
+            </article>
+
+            <article class="studioOpsCard studioOpsPending studioOpsTabPanel" id="studio-ops-pending" role="tabpanel" data-studio-ops-panel="pending" hidden>
+              <span>🗂 Pending Shelf</span>
+              <strong>未処理タスク</strong>
+              <p>締切仕事・公開ページ・個人用ツール・素材運用を、別のレーンで追います。</p>
+              <div class="studioTaskLanes">
+                <section class="studioTaskLane" data-task-lane="submission">
+                  <header><span>🧭</span><strong>今日の順番</strong><small>P0 / 迷子防止</small></header>
+                  <ul>
+                    <li>公開前再点検：Private混入・絶対パス・APIキーを確認</li>
+                    <li>公開ページ横断：リンクとDesktop / Mobile表示を確認</li>
+                    <li>判定後：軽微修正 → 再ビルド → 公開監査</li>
+                  </ul>
+                </section>
+                <section class="studioTaskLane" data-task-lane="public">
+                  <header><span>🌐</span><strong>公開HP</strong><small>P1 / 訪問者向け</small></header>
+                  <ul>
+                    <li>WTFC：公開前の映像・音素材・公開範囲チェック</li>
+                    <li>WTFC：iPhoneでShadowMogu紹介の右上が見切れる表示を修正</li>
+                    <li>ホシフルカフェ：Photo棚を写真面／ぐーちゃんコメント面の回転カードへ</li>
+                    <li>Shiro's Atelier：たまごっち育成UIとSHORT STORY運用</li>
+                    <li>AI Lab：山のぼりゲーム、追加プラグイン、ベンダーマシン</li>
+                  </ul>
+                </section>
+                <section class="studioTaskLane" data-task-lane="private">
+                  <header><span>🛠</span><strong>個人ツール</strong><small>P2 / Parallel</small></header>
+                  <ul>
+                    <li>並行A / Creator Companion個人版：日本語UI、テンプレート、履歴、安全なワンクリック起動</li>
+                    <li>並行B / EyeBook：Library Import MVP → フォルダ章構造 → Tree View</li>
+                    <li>Visual Manual Studio：操作資料とデモ制作の連携</li>
+                    <li>Build Week提出系：本番提出とは分けて、今後のコンペ用テンプレへ残す</li>
+                  </ul>
+                </section>
+                <section class="studioTaskLane" data-task-lane="operations">
+                  <header><span>📦</span><strong>素材・運用</strong><small>P2 / 継続業務</small></header>
+                  <ul>
+                    <li>WTFC Capture：captures棚からindex、確認HTML、Public Planを生成</li>
+                    <li>Suno Asset Workshop：検索台帳と安全な取込フロー</li>
+                    <li>WTFC / Shiro：写真・動画・音源の仕分けと重複確認</li>
+                    <li>🚘️・空の投函口：Open / Working / Doneで新着メモを仕分け</li>
+                    <li>🚘️・ハッ箱：世界観カテゴリー分類、追記差分確認、EyeBook連携を検討</li>
+                  </ul>
+                </section>
+              </div>
+            </article>
+
+            <article class="studioOpsCard studioOpsInbox studioOpsTabPanel" id="studio-ops-inbox" role="tabpanel" data-studio-ops-panel="inbox" hidden>
+              <span>📮 Today Intake</span>
+              <strong>今日の投函口</strong>
+              <p>まずここを見る。Tの備忘録、空の投函口、🚘️アイデア駐車場を今日の作業へ仕分けします。</p>
+              <ul>
+                <li>20260803 / Suno目次録：ブラウザ版スクリーンショット88枚をGが一覧化</li>
+                <li>20260803 / 虹のプリズム工房：Main Version / Stem Set / Shorts Projectの共通設計を確定</li>
+                <li>20260803 / オッカムの剃刀：WAV Stem 10件・MIDI 7件を曲箱へ反映</li>
+                <li>20260803 / Suno Bundle：自動再索引、競合明細、Private保管・復元を実装</li>
+                <li>20260802 / iCloud空の投函口：新着なし</li>
+                <li>20260802 / 虹のプリズム工房：公開ゲート、公開コピー3段階、Listening Room反映を実動確認</li>
+                <li>20260802 / Suno個別MP3：埋め込みカバーだけ／カバー＋フル曲の選択取込を追加</li>
+                <li>20260801 / iCloud空の投函口：新着なし</li>
+                <li>20260801 / プレオープン期限：いったん外し、公開前再点検を優先</li>
+                <li>20260730 / iCloud空の投函口：新着なし</li>
+                <li>20260730 / 虹のプリズム工房：407曲・51ページ・4モード・7段階ガイドの最終QA完了</li>
+                <li>20260729 / Soraの星空工房：作品・素材台・映像制作台・🌰公開準備へ集約</li>
+                <li>20260729 / WTFC案内板：星空工房・AI Lab・公開側・本部の4方向へ整理</li>
+                <li>20260729 / 世界樹3D試作室：AI Labの独立試作として登録</li>
+                <li>20260729 / G&amp;T全体工程表：プレオープン期限を外して再整理</li>
+                <li>20260726 / iCloud空の投函口：Open / Working / Done運用へ更新</li>
+                <li>20260726 / G ↔ Codex Handoff：連絡所と決定事項ファイルを設置</li>
+                <li>20260726 / Shiro Story First：素材単位ではなく作品単位へ寄せる設計を受領</li>
+                <li>20260726 / Shiro Flipbook Studio：Phase 1 Cutter MVPから開始可能と判断</li>
+                <li>20260726 / WTFC Workshop：Capture Import UI化を今日の先行タスクへ</li>
+                <li>20260720 / EyeBook構想v1・70資料G Edition・Library Import優先案を受領</li>
+                <li>20260720 / EyeBook構想v2・ParkingをDevelopment Chronicleへ育てる案を受領</li>
+                <li>20260720 / 脳みそリソース削減案・まず例え、次に技術名の説明ルールを受領</li>
+                <li>20260720 / Codex挨拶時の日次開始確認を運用ルール化</li>
+                <li>20260719 / EyeBook v0.2 相談・Sceneコンパイラ仕様を受領</li>
+                <li>20260719 / 開発室のARRIVAL・TODAY BOARD・LOUNGE・ARCHIVE再編案</li>
+                <li>Build Week / Creator Companion提出ガイド</li>
+                <li>Creator Companion個人運用版の起動・API運用案</li>
+                <li>Suno・WTFC・Shiroの素材整理メモ</li>
+                <li>空の投函口 / iCloud</li>
+                <li>idea-parking raw：WTFC / app / 日付 / 00_Archiveへ区分済み</li>
+              </ul>
+            </article>
+
+            <article class="studioOpsCard studioOpsDone studioOpsTabPanel" id="studio-ops-done" role="tabpanel" data-studio-ops-panel="done" hidden>
+              <span>✅ Done Shelf</span>
+              <strong>今日できた棚</strong>
+              <p>コミット前にここを見る。できたこと、触った場所、次に残すことを小さく並べます。</p>
+              <div class="studioDoneShelf">
+                <span>オッカムの剃刀 Stem取込</span>
+                <span>Bundle割当後の自動再索引</span>
+                <span>Bundle競合明細</span>
+                <span>Private保管棚・復元</span>
+                <span>Main / Stem / Shorts設計</span>
+                <span>Suno目次録をGへ引継ぎ</span>
+                <span>Suno公開ゲート実動確認</span>
+                <span>公開コピー3段階を階段UI化</span>
+                <span>Listening Room反映確認</span>
+                <span>個別MP3カバー取込</span>
+                <span>カバー＋フル曲選択取込</span>
+                <span>8月開発室更新</span>
+                <span>公開前再点検へ切替</span>
+                <span>虹のプリズム工房UI完成</span>
+                <span>Suno 407曲維持</span>
+                <span>Work / 歌詞 / Shorts / 公開準備</span>
+                <span>Suno 7段階ガイド</span>
+                <span>Suno前回画面自動復元</span>
+                <span>Soraの星空工房4機能集約</span>
+                <span>映像制作台3ツール統合</span>
+                <span>🌰公開準備承認</span>
+                <span>WTFC 4方向案内板</span>
+                <span>世界樹3D試作室 / AI Lab登録</span>
+                <span>G&amp;T全体工程表</span>
+                <span>月間ボード</span>
+                <span>タブ机</span>
+                <span>カプセルマシン</span>
+                <span>作業部屋ランチャー入口</span>
+                <span>Back Room分離</span>
+                <span>Forest Door SE</span>
+                <span>3和音メーカー</span>
+                <span>ホシフル写真棚整理</span>
+                <span>Storyリンク補強</span>
+                <span>シロちゃんチェキ大判展示</span>
+                <span>Suno高信頼リネーム174件</span>
+                <span>Suno Private / Publicルール</span>
+                <span>開発室チャット注意表示</span>
+                <span>部屋別Work Desk</span>
+                <span>AI Lab SNS横並び</span>
+                <span>GPT-5.6 API実生成成功</span>
+                <span>未処理タスク4レーン化</span>
+                <span>全室Work Map</span>
+                <span>開発室文字コントラスト調整</span>
+                <span>EyeBook Sceneコンパイラ</span>
+                <span>開発室4ゾーン再編</span>
+                <span>EyeBook 70資料G Edition保管</span>
+                <span>EyeBook次回設計・互換条件</span>
+                <span>Parking Archive G Edition保管</span>
+                <span>Development Chronicle設計</span>
+                <span>G&amp;T説明スタイル統一</span>
+                <span>AI Handoff連絡所</span>
+                <span>空の投函口3段階運用</span>
+                <span>Shiro Story First設計</span>
+              </div>
+            </article>
+
+            <article class="studioOpsCard studioOpsSchedule studioOpsTabPanel" id="studio-ops-schedule" role="tabpanel" data-studio-ops-panel="schedule" hidden>
+              <span>📅 Schedule</span>
+              <strong>出勤ボード + 月間予定</strong>
+              <div data-studio-calendar-slot></div>
+            </article>
+          </section>
+
+          <div class="morningBriefing">
+            <div>
+              <span>今日の朝礼</span>
+              <time datetime="2026-08-03">2026.08.03</time>
+            </div>
+            <button type="button" data-radio-exercise-toggle>ラジオ体操</button>
+            <div class="morningExerciseStage" data-radio-exercise aria-label="G&T ラジオ体操">
+              <i data-exercise-member="t">👩</i>
+              <i data-exercise-member="g">🤖</i>
+              <i data-exercise-member="ko">💻</i>
+              <i data-exercise-member="andrew">🧠</i>
+              <i data-exercise-member="claude">🧘</i>
+              <i data-exercise-member="p">🔍</i>
+            </div>
+            <p class="morningZawa" aria-hidden="true"><span>ざわ...</span><span>ざわ...</span><span>ざわ...</span></p>
+            <aside class="morningProtocolStatus" aria-label="Morning Protocol status">
+              <strong>Morning Protocol</strong>
+              <span>Status</span>
+              <ul>
+                <li><b>👩</b> Working</li>
+                <li><b>🤖</b> Working</li>
+                <li><b>💻</b> Building</li>
+                <li><b>🧠</b> Thinking</li>
+                <li><b>🧘</b> Meditating</li>
+                <li><b>🔍</b> Syncing...</li>
+              </ul>
+            </aside>
+            <audio data-radio-exercise-audio preload="none" src="/g-and-t-studio-site/assets/morning-protocol-v00-DzEdxjGN.mp3"></audio>
+          </div>
+          <section class="studioScheduleBoard" id="team-calendar" aria-label="G&T Studio Board">
+            <div class="studioScheduleHeader">
+              <span>📅 Team Calendar</span>
+              <strong>出勤ボード + 月間予定</strong>
+            </div>
+            <div class="studioCalendarApp" data-studio-calendar>
+              <section class="studioCalendarRoster" aria-label="今日の出勤メンバー">
+                <div class="studioRosterHeader">
+                  <span>🟢 Today Team</span>
+                  <strong>2026.08.02</strong>
+                </div>
+                <div class="studioRosterGrid">
+                  <article data-studio-member="t">
+                    <span>👩</span>
+                    <strong data-studio-status>公開前再点検中</strong>
+                  </article>
+                  <article data-studio-member="g">
+                    <span>🤖</span>
+                    <strong data-studio-status>公開判断整理中</strong>
+                  </article>
+                  <article data-studio-member="ko">
+                    <span>💻</span>
+                    <strong data-studio-status>日次更新中</strong>
+                  </article>
+                  <article data-studio-member="andrew">
+                    <span>🧠</span>
+                    <strong data-studio-status>素材確認待機中</strong>
+                  </article>
+                  <article data-studio-member="claude">
+                    <span>🧘</span>
+                    <strong data-studio-status>素材試作待機中</strong>
+                  </article>
+                  <article data-studio-member="p">
+                    <span>🔍</span>
+                    <strong data-studio-status>次回調査待機</strong>
+                  </article>
+                </div>
+                <div class="studioScheduleLegend studioRosterLegend" aria-label="ステータス凡例">
+                  <span>🟢 作業中</span>
+                  <span>🟡 保留</span>
+                  <span>🔵 完了</span>
+                  <span>🔴 デプロイ予定</span>
+                </div>
+              </section>
+              <div class="studioCalendarNav" aria-label="月送り">
+                <button type="button" disabled>July</button>
+                <strong>August 2026</strong>
+                <button type="button" disabled>September</button>
+              </div>
+              <div class="studioCalendarWeekdays" aria-hidden="true">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div class="studioCalendarGrid">
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-active" data-studio-day="1" data-has-plan><strong>1</strong><span>👩</span><span>💻</span><span>☕</span></button>
+                <button type="button" data-studio-day="2"><strong>2</strong></button>
+                <button type="button" data-studio-day="3"><strong>3</strong></button>
+                <button type="button" data-studio-day="4"><strong>4</strong></button>
+                <button type="button" data-studio-day="5"><strong>5</strong></button>
+                <button type="button" data-studio-day="6"><strong>6</strong></button>
+                <button type="button" data-studio-day="7"><strong>7</strong></button>
+                <button type="button" data-studio-day="8"><strong>8</strong></button>
+                <button type="button" data-studio-day="9"><strong>9</strong></button>
+                <button type="button" data-studio-day="10"><strong>10</strong></button>
+                <button type="button" data-studio-day="11"><strong>11</strong></button>
+                <button type="button" data-studio-day="12"><strong>12</strong></button>
+                <button type="button" data-studio-day="13"><strong>13</strong></button>
+                <button type="button" data-studio-day="14"><strong>14</strong></button>
+                <button type="button" data-studio-day="15"><strong>15</strong></button>
+                <button type="button" data-studio-day="16"><strong>16</strong></button>
+                <button type="button" data-studio-day="17"><strong>17</strong></button>
+                <button type="button" data-studio-day="18"><strong>18</strong></button>
+                <button type="button" data-studio-day="19"><strong>19</strong></button>
+                <button type="button" data-studio-day="20"><strong>20</strong></button>
+                <button type="button" data-studio-day="21"><strong>21</strong></button>
+                <button type="button" data-studio-day="22"><strong>22</strong></button>
+                <button type="button" data-studio-day="23"><strong>23</strong></button>
+                <button type="button" data-studio-day="24"><strong>24</strong></button>
+                <button type="button" data-studio-day="25"><strong>25</strong></button>
+                <button type="button" data-studio-day="26"><strong>26</strong></button>
+                <button type="button" data-studio-day="27"><strong>27</strong></button>
+                <button type="button" data-studio-day="28"><strong>28</strong></button>
+                <button type="button" data-studio-day="29"><strong>29</strong></button>
+                <button type="button" data-studio-day="30"><strong>30</strong></button>
+                <button type="button" data-studio-day="31"><strong>31</strong></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+                <button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>
+              </div>
+              <aside class="studioCalendarDetail" data-studio-detail>
+                <span>8月1日</span>
+                <div class="studioDayMembers" data-studio-day-members>
+                  <button type="button" class="is-active"><i class="statusWorking"></i><span>👩</span></button>
+                  <button type="button"><i class="statusWorking"></i><span>💻</span></button>
+                  <button type="button"><i class="statusWorking"></i><span>🤖</span></button>
+                  <button type="button"><i class="statusWorking"></i><span>🧰</span></button>
+                  <button type="button"><i class="statusHold"></i><span>📅</span></button>
+                </div>
+                <p class="studioCalendarMemberDetail" data-studio-member-detail>
+                  <i class="statusWorking"></i><strong>👩 T</strong><span>公開前再点検と無理のない再開順整理</span>
+                </p>
+              </aside>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <div class="musicSection studioZoneMarker studioZoneTeam" aria-label="開発室 制作チームエリア">
+        <span>03 / TEAM BOOTH</span>
+        <strong>制作チーム・社歌・チャット</strong>
+        <small>メンバー紹介と、作業中のひと言</small>
+      </div>
+
+      <section class="musicSection studioTeamSection" aria-label="制作チーム紹介">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Creative Team</p>
+          <h2>制作チーム紹介</h2>
+          <p>AIを使っています、ではなく。役割の違うメンバーと、作品を一緒に育てています。</p>
+        </div>
+        <aside class="studioCompanySong" data-company-song aria-label="G&T開発室 Now Playing">
+          <div>
+            <span>🎵 Now Playing</span>
+            <strong>G&amp;Tのうた</strong>
+            <small>社歌音源が来たらここへ接続します</small>
+          </div>
+          <button type="button" data-company-song-toggle>社歌を鳴らす</button>
+          <audio data-company-song-audio preload="none" src="/g-and-t-studio-site/assets/g-and-t-song-nkwQChn5.mp3"></audio>
+        </aside>
+        <div class="studioTeamGrid">
+          <article class="studioTeamCard" data-team-card data-team-member="t" role="button" tabindex="0">
+            <span>👩</span>
+            <h3>T</h3>
+          </article>
+          <article class="studioTeamCard" data-team-card data-team-member="g" role="button" tabindex="0">
+            <span>🤖</span>
+            <h3>G（ChatGPT）</h3>
+          </article>
+          <article class="studioTeamCard" data-team-card data-team-member="ko" role="button" tabindex="0">
+            <span>💻</span>
+            <h3>こーちゃん（Codex）</h3>
+          </article>
+          <article class="studioTeamCard" data-team-card data-team-member="andrew" role="button" tabindex="0">
+            <span>🧠</span>
+            <h3>アンドリューくん（Gemini）</h3>
+          </article>
+          <article class="studioTeamCard" data-team-card data-team-member="claude" role="button" tabindex="0">
+            <span>🧘</span>
+            <h3>くーちゃん（Claude）</h3>
+          </article>
+          <article class="studioTeamCard" data-team-card data-team-member="p" role="button" tabindex="0">
+            <span>🔍</span>
+            <h3>P（Perplexity）</h3>
+          </article>
+        </div>
+        <div class="studioTeamConsole">
+          <article class="studioTeamProfile" data-team-profile aria-live="polite">
+            <span>Tap member</span>
+            <h3>メンバーを選んでください</h3>
+            <strong>Profile Console</strong>
+            <small>役職・予定・ひと言</small>
+            <p>上のアイコンを押すと、役職と担当がここに表示されます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="musicSection studioChatRoom" id="studio-team-chat" aria-label="G&T 開発室 グループチャット">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Team Chat</p>
+          <h2>開発室チャット</h2>
+          <p>作業メモと朝礼のあいだ。必要な話だけ、あとから読み返せる小さなチャット欄です。</p>
+        </div>
+        <div class="meetingChat studioTeamChat" aria-label="G&T 開発室 グループチャット本文">
+          <div class="studioChatLog" data-studio-chat-log>
+          <article>
+            <span>👩 T</span>
+            <p>備忘録にまとめる運用、だいぶ脳みそに優しくなってきた。</p>
+          </article>
+          <article>
+            <span>🤖 G</span>
+            <p>出勤ボードと予定表は、同じ場所にある方が見通しがいいね☕</p>
+          </article>
+          <article>
+            <span>💻 こーちゃん</span>
+            <p>Team Calendarにまとめました。今日見る場所はここです。</p>
+          </article>
+          <article>
+            <span>🧠 Andrew</span>
+            <p>月間予定と担当者の紐づけ、あとから資料化しやすいです📚</p>
+          </article>
+          <article>
+            <span>🧘 くーちゃん</span>
+            <p>やることが多い日ほど、入口は一つで大丈夫。</p>
+          </article>
+          <article>
+            <span>🔍 P</span>
+            <p>未処理タスクの棚卸しも、ここから追えます🔎</p>
+          </article>
+          </div>
+          <aside class="studioChatNotice" role="note" aria-label="チャット入力時の注意">
+            <strong>⚠ Attention ⚠</strong>
+            <span>ここは開発室ごっこ用の軽い反応チャットです。個人情報・秘密・公開して困る内容は入力しないでください。入力内容の保存や保護は保証できません。</span>
+          </aside>
+          <form class="studioChatForm" data-studio-chat-form>
+            <label>
+              <span data-studio-chat-name>Kon</span>
+              <input type="text" data-studio-chat-input placeholder="なにか入力するとメンバーが喜びます。" autocomplete="off">
+            </label>
+            <button type="submit">送る</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="musicSection studioLoungeHub" data-studio-lounge aria-label="開発室 ラウンジ">
+        <div class="studioZoneMarker studioZoneLounge">
+          <span>04 / LOUNGE</span>
+          <strong>休憩・交流</strong>
+          <small>カフェ / チャット / メンバー</small>
+        </div>
+        <div class="studioLoungeTabs" role="tablist" aria-label="ラウンジ切り替え">
+          <button type="button" class="is-active" role="tab" aria-selected="true" aria-controls="studio-lounge-cafe" data-studio-lounge-tab="cafe">☕ CAFE</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="studio-lounge-team" data-studio-lounge-tab="team">🤖 TEAM</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="studio-lounge-chat" data-studio-lounge-tab="chat">💬 CHAT</button>
+        </div>
+        <div class="studioLoungePanel is-active" id="studio-lounge-cafe" role="tabpanel" data-studio-lounge-panel="cafe" data-studio-lounge-slot="cafe"></div>
+        <div class="studioLoungePanel" id="studio-lounge-team" role="tabpanel" data-studio-lounge-panel="team" data-studio-lounge-slot="team" hidden></div>
+        <div class="studioLoungePanel" id="studio-lounge-chat" role="tabpanel" data-studio-lounge-panel="chat" data-studio-lounge-slot="chat" hidden></div>
+      </section>
+
+      <section class="musicSection studioDeskTabs" data-studio-tabs aria-label="開発室ボード">
+        <div class="studioZoneMarker studioZoneArchive">
+          <span>05 / DEVELOPMENT BOOTHS</span>
+          <strong>全館フロア案内・開発ツール・運営エリア</strong>
+          <small>仕事の続き、試作室、完成記録</small>
+        </div>
+        <div class="studioTabList" role="tablist" aria-label="開発室案内板切り替え">
+          <button type="button" class="is-active" role="tab" aria-selected="true" aria-controls="studio-tab-work" data-studio-tab="work">FLOOR MAP</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="studio-tab-notebook" data-studio-tab="notebook">LOGS</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="studio-tab-ui-catalog" data-studio-tab="ui-catalog">SHOWROOM</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="studio-tab-bulletin" data-studio-tab="bulletin">DOORS</button>
+        </div>
+        <article class="studioPinBoard studioTabPanel is-active" id="studio-tab-work" role="tabpanel" data-studio-panel="work">
+          <p class="portalDeskLabel">Floor Guide</p>
+          <h2>全館フロア案内板</h2>
+          <div class="studioWorkMap" aria-label="G&T Studio 部屋ルート図">
+            <div class="studioWorkMapLegend" aria-label="優先度の凡例">
+              <span><i class="is-current"></i>現在地</span>
+              <span><i class="is-priority"></i>公開優先</span>
+              <span><i class="is-growing"></i>育成中</span>
+              <span><i class="is-steady"></i>通常運用</span>
+            </div>
+            <p class="studioWorkMapLead">部屋ごとの「今やること」と「次の一手」を、ここでまとめて見るための現在地マップです。</p>
+
+            <section class="studioBuildingGuide" data-building-guide aria-label="G&T Building 総合案内マップ">
+              <header class="studioBuildingHeader">
+                <div>
+                  <p class="portalDeskLabel">1F Lobby Map</p>
+                  <h3>G&amp;T Building 総合案内マップ</h3>
+                  <p>1Fロビーから各部屋へ。行き先を押すと、現在地から細い線がにょろっと伸びます。</p>
+                </div>
+                <strong>YOU ARE HERE / 1F Lobby</strong>
+              </header>
+              <div class="studioBuildingBoard">
+                <div class="studioBuildingMap" aria-label="G&T Building 1F 総合案内">
+                  <svg class="studioBuildingRoutes" viewBox="0 0 980 660" role="img" aria-label="現在地から目的地へのルート線">
+                    <path class="buildingRoute routeAi is-active" data-building-route="AI_LAB" pathLength="1" d="M495 490 C420 420 315 270 220 175"></path>
+                    <path class="buildingRoute routeMusic" data-building-route="MUSIC_STUDIO" pathLength="1" d="M495 490 C490 390 492 285 490 152"></path>
+                    <path class="buildingRoute routeEyebook" data-building-route="EYEBOOK" pathLength="1" d="M495 490 C570 405 705 285 770 180"></path>
+                    <path class="buildingRoute routeWtfc" data-building-route="WTFC" pathLength="1" d="M495 490 C405 465 300 432 210 420"></path>
+                    <path class="buildingRoute routeShiro" data-building-route="SHIRO_ATELIER" pathLength="1" d="M495 490 C585 450 700 423 792 420"></path>
+                    <path class="buildingRoute routeArchive" data-building-route="ARCHIVE" pathLength="1" d="M495 490 C495 530 497 570 500 610"></path>
+                  </svg>
+                  <div class="buildingZone zoneAi" aria-hidden="true"></div>
+                  <div class="buildingZone zoneMusic" aria-hidden="true"></div>
+                  <div class="buildingZone zoneEyebook" aria-hidden="true"></div>
+                  <div class="buildingZone zoneWtfc" aria-hidden="true"></div>
+                  <div class="buildingZone zoneShiro" aria-hidden="true"></div>
+                  <div class="buildingZone zoneArchive" aria-hidden="true"></div>
+                  <div class="buildingZone zoneLobby" aria-hidden="true"></div>
+                  <button type="button" class="buildingDestination destAi is-active" data-building-destination="AI_LAB" data-target-href="./ai-lab.html" data-route-style="thin-blue">
+                    <span>AI</span><strong>AI Lab</strong><small>2F / 実験室</small>
+                  </button>
+                  <button type="button" class="buildingDestination destMusic" data-building-destination="MUSIC_STUDIO" data-target-href="./music.html" data-route-style="sound-wave">
+                    <span>♪</span><strong>Music Studio</strong><small>3F / 音楽室</small>
+                  </button>
+                  <button type="button" class="buildingDestination destEyebook" data-building-destination="EYEBOOK" data-target-href="./gallery.html#ui-showroom" data-route-style="bookmark">
+                    <span>E</span><strong>EyeBook</strong><small>4F / 資料室</small>
+                  </button>
+                  <button type="button" class="buildingDestination destWtfc" data-building-destination="WTFC" data-target-href="./world-tree-forest-cafe/index.html" data-route-style="branch">
+                    <span>木</span><strong>WTFC</strong><small>B1 / 世界樹の森</small>
+                  </button>
+                  <button type="button" class="buildingDestination destShiro" data-building-destination="SHIRO_ATELIER" data-target-href="./shiro.html" data-route-style="thread">
+                    <span>糸</span><strong>Shiro Atelier</strong><small>5F / アトリエ</small>
+                  </button>
+                  <button type="button" class="buildingDestination destArchive" data-building-destination="ARCHIVE" data-target-href="#studio-tab-notebook" data-route-style="dotted">
+                    <span>A</span><strong>Archive</strong><small>B2 / 保管庫</small>
+                  </button>
+                  <div class="buildingYouAreHere">
+                    <span>YOU ARE HERE</span>
+                    <strong>1F Lobby</strong>
+                  </div>
+                </div>
+                <aside class="studioBuildingInfo" data-building-info aria-live="polite">
+                  <span data-building-route-label>thin-blue route</span>
+                  <h4 data-building-title>AI Lab</h4>
+                  <p data-building-description>AI実験・小さな遊び・次のアプリ案を試す部屋です。まずはここから実験台へ向かいます。</p>
+                  <a href="./ai-lab.html" data-building-link>この部屋へ行く</a>
+                </aside>
+              </div>
+            </section>
+
+            <section class="studioWorkBand studioWorkEntrance" aria-labelledby="work-map-entrance">
+              <header>
+                <span>ENTRANCE</span>
+                <h3 id="work-map-entrance">すべての部屋の入口</h3>
+              </header>
+              <a class="studioWorkRoom is-hub" href="./preview.html#top" data-work-floor="1F">
+                <small class="studioFloorBadge is-floor-number">1F</small>
+                <span><strong>G&amp;T Portal</strong><small>全室をつなぐ玄関</small></span>
+                <ul class="studioWorkTaskList">
+                  <li><b>Now</b>公開範囲の整理</li>
+                  <li><b>Next</b>各部屋カードの見直し</li>
+                </ul>
+              </a>
+            </section>
+
+            <div class="studioWorkArrow" aria-hidden="true">↓ PUBLIC FLOOR ↓</div>
+
+            <section class="studioWorkBand studioWorkPublic" aria-labelledby="work-map-public">
+              <header>
+                <span>PUBLIC ROOMS</span>
+                <h3 id="work-map-public">お客さんが訪れる公開フロア</h3>
+              </header>
+              <div class="studioWorkRoomGrid">
+                <a class="studioWorkRoom is-priority" href="./world-tree-forest-cafe/index.html" data-work-floor="TREE">
+                  <small class="studioFloorBadge">TREE</small>
+                  <span><strong>World Tree Forest Cafe</strong><small>公開優先：表示調整・森の体験</small></span>
+                  <em>PRIORITY</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>小さな表示修正</li>
+                    <li><b>Next</b>公開前チェック表</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-priority" href="./world-tree-forest-cafe/hoshifuru-cafe.html" data-work-floor="1F">
+                  <small class="studioFloorBadge is-floor-number">1F</small>
+                  <span><strong>Hoshifuru Cafe</strong><small>写真棚と人間界姉妹店の見せ方</small></span>
+                  <em>PHOTO</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>回転カード棚</li>
+                    <li><b>Next</b>季節メニュー追加</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-priority" href="./world-tree-forest-cafe/jukan-no-tomoshibi.html" data-work-floor="CANOPY">
+                  <small class="studioFloorBadge">CANOPY</small>
+                  <span><strong>Jukan no Tomoshibi</strong><small>プロジェクターとGLOWDUST映像</small></span>
+                  <em>VIDEO</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>映像素材チェック</li>
+                    <li><b>Next</b>音かぶり確認</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-steady" href="./world-tree-forest-cafe/story.html" data-work-floor="BOOK">
+                  <small class="studioFloorBadge">BOOK</small>
+                  <span><strong>WTFC Story</strong><small>ぐーモグと世界樹の関係整理</small></span>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>ShadowMogu見切れ確認</li>
+                    <li><b>Next</b>はじまりの書追加</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-growing" href="./shiro.html" data-work-floor="1F">
+                  <small class="studioFloorBadge is-floor-number">1F</small>
+                  <span><strong>Shiro's Atelier</strong><small>世界観・物語・展示を育成中</small></span>
+                  <em>GROWING</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>棚の軽微整理</li>
+                    <li><b>Next</b>主役導線の再確認</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-growing" href="./shiro-video-room.html" data-work-floor="1F">
+                  <small class="studioFloorBadge is-floor-number">1F</small>
+                  <span><strong>Shiro Video Room</strong><small>SHORT STORY / MUSIC PV / note流用</small></span>
+                  <em>STORY</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>部屋分け維持</li>
+                    <li><b>Next</b>アテレコ型カード</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-steady" href="./music.html" data-work-floor="1F">
+                  <small class="studioFloorBadge is-floor-number">1F</small>
+                  <span><strong>Listening Room</strong><small>公開音源と各部屋のBGMへ連携</small></span>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>Suno棚卸し待ち</li>
+                    <li><b>Next</b>BGMリンク整理</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-steady" href="./ai-lab.html" data-work-floor="1F">
+                  <small class="studioFloorBadge is-floor-number">1F</small>
+                  <span><strong>AI Lab</strong><small>遊べる実験とプラグインの試作</small></span>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>保留</li>
+                    <li><b>Next</b>追加プラグイン案</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-steady" href="./gallery.html" data-work-floor="1F">
+                  <small class="studioFloorBadge is-floor-number">1F</small>
+                  <span><strong>Showroom</strong><small>完成作品とUI Libraryの公開ショーケース</small></span>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>UI Library移設候補</li>
+                    <li><b>Next</b>作品カード更新</li>
+                  </ul>
+                </a>
+              </div>
+            </section>
+
+            <div class="studioWorkArrow" aria-hidden="true">↕ PLAN / BUILD / PUBLISH ↕</div>
+
+            <section class="studioWorkBand studioWorkOperations" aria-labelledby="work-map-operations">
+              <header>
+                <span>OPERATIONS</span>
+                <h3 id="work-map-operations">全室を支える運用フロア</h3>
+              </header>
+              <div class="studioWorkRoomGrid studioWorkRoomGridOps">
+                <a class="studioWorkRoom is-current" href="./notes.html#studio-tab-work" data-work-floor="2F">
+                  <small class="studioFloorBadge is-floor-number">2F</small>
+                  <span><strong>Studio Log</strong><small>現在地：優先順位・記録・全室の交通整理</small></span>
+                  <em>YOU ARE HERE</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>open-tasks / concepts分離</li>
+                    <li><b>Next</b>部屋別マップ反映</li>
+                  </ul>
+                </a>
+                <span class="studioWorkRoom is-private" data-local-backroom data-local-href="./private-studio-tools.local.html" data-work-floor="B1" aria-disabled="true">
+                  <small class="studioFloorBadge is-floor-number">B1</small>
+                  <span><strong>Studio Back Room</strong><small>管理ツール・投函口・マニュアル</small></span>
+                  <em>LOCAL ONLY</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>非公開導線</li>
+                    <li><b>Next</b>作業部屋ランチャー集約</li>
+                  </ul>
+                </span>
+                <a class="studioWorkRoom is-growing" href="./gallery.html#ui-showroom" data-work-floor="B1">
+                  <small class="studioFloorBadge is-floor-number">B1</small>
+                  <span><strong>EyeBook</strong><small>Design Card / Library Import / Tree View</small></span>
+                  <em>TOOL</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>構想棚を読む</li>
+                    <li><b>Next</b>複数md/txt取込</li>
+                  </ul>
+                </a>
+                <a class="studioWorkRoom is-growing" href="./gallery.html#ui-showroom" data-work-floor="B1">
+                  <small class="studioFloorBadge is-floor-number">B1</small>
+                  <span><strong>Creator Companion</strong><small>投稿文・タグ・Publish Pack</small></span>
+                  <em>TOOL</em>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>個人運用版</li>
+                    <li><b>Next</b>履歴とテンプレ</li>
+                  </ul>
+                </a>
+                <span class="studioWorkRoom is-steady" data-work-floor="B1">
+                  <small class="studioFloorBadge is-floor-number">B1</small>
+                  <span><strong>Suno Asset Workshop</strong><small>Private原本 / Public軽量コピー / Reports</small></span>
+                  <ul class="studioWorkTaskList">
+                    <li><b>Now</b>安全棚卸し</li>
+                    <li><b>Next</b>READMEへ反映</li>
+                  </ul>
+                </span>
+              </div>
+            </section>
+
+            <div class="studioWorkRelations" aria-label="部屋の相関関係">
+              <p><strong>1F</strong> は訪問者が歩く公開フロア。<strong>2F</strong> はこーちゃんたちの開発室。</p>
+              <p><strong>B1</strong> はTとこーちゃんが使う非公開ツール倉庫。<strong>TREE / CANOPY</strong> は世界樹側の特別フロア。</p>
+              <p><strong>Showroom</strong> が完成作品とUI Libraryの出口、<strong>Studio Log</strong> が全館の進行管理を担う。</p>
+            </div>
+            <div class="studioReturnLift">
+              <button type="button" data-return-elevator><span>↑</span>受付エレベーターへ戻る</button>
+              <small>迷ったら2F受付へ。そこから全館へ飛べます。</small>
+            </div>
+          </div>
+          <details class="studioDailyUpdateMap">
+            <summary>日々の更新マップを見る</summary>
+            <div class="studioTableWrap">
+              <table>
+                <thead><tr><th>部屋</th><th>更新するもの</th><th>タイミング</th><th>方式</th></tr></thead>
+                <tbody>
+                  <tr><td>G&amp;T 開発室</td><td>未処理棚・次の3つ・開発ログ</td><td>作業日または区切り</td><td><span class="updateBadge manual">手動</span></td></tr>
+                  <tr><td>WTFC</td><td>今日の森だより</td><td>素材や便りを追加した時</td><td><span class="updateBadge auto">表示は自動</span></td></tr>
+                  <tr><td>Shiro's Atelier</td><td>今日のシロちゃん</td><td>候補写真を追加した時</td><td><span class="updateBadge auto">日替わり自動</span></td></tr>
+                  <tr><td>ホシフルカフェ</td><td>本日の席・おすすめ・写真棚</td><td>季節や新作に合わせて</td><td><span class="updateBadge seasonal">必要時</span></td></tr>
+                  <tr><td>Listening Room</td><td>公開曲・本日のお品書き</td><td>曲を公開した時</td><td><span class="updateBadge seasonal">追加時</span></td></tr>
+                  <tr><td>AI Lab / Showroom / TOP</td><td>実験・実績・お知らせ</td><td>新規公開や季節変更時</td><td><span class="updateBadge seasonal">追加時</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </article>
+
+        <article class="studioPinBoard studioTabPanel" id="studio-tab-notebook" role="tabpanel" data-studio-panel="notebook" hidden>
+          <p class="portalDeskLabel">Notebook</p>
+          <h2>開発ログ</h2>
+          <div class="logTape">
+            <p><time datetime="2026-08-03">2026.08.03</time> オッカムの剃刀へWAV Stem 10件・MIDI 7件を安全取込。Bundle割当後の自動再索引、競合確認、Private保管・復元を追加し、Main / Stem / Shortsの次期データ構造を記録。</p>
+            <p><time datetime="2026-08-02">2026.08.02</time> 虹のプリズム工房で公開ゲートからListening Room反映までを実動確認し、個別MP3からカバーだけ／カバー＋フル曲を安全に選べる取込を追加。</p>
+            <p><time datetime="2026-08-01">2026.08.01</time> プレオープン期限をいったん外し、公開前再点検と残工程の安全な再整理へ切り替え。</p>
+            <p><time datetime="2026-07-30">2026.07.30</time> 虹のプリズム工房を407曲対応の制作ツールへ更新し、Work・歌詞・Shorts・公開準備と7段階ガイドの最終QAを完了。</p>
+            <p><time datetime="2026-07-29">2026.07.29</time> Soraの星空工房へ作品・素材台・映像制作台・公開準備を集約し、WTFC総合工房を4方向の案内板へ整理。</p>
+            <p><time datetime="2026-07-29">2026.07.29</time> 映像制作台へCapture採集と音調整を統合し、Workごとの🌰公開準備承認を追加。</p>
+            <p><time datetime="2026-07-26">2026.07.26</time> WTFC Capture Importを総合工房の導線へ接続し、サムネ候補1件をPublicコピー確認Planへ出せる状態に更新。</p>
+            <p><time datetime="2026-07-26">2026.07.26</time> Back RoomのManual Launcher表記を作業部屋ランチャーへ寄せ、ツール名と設計書棚の見分けを整理。</p>
+            <p><time datetime="2026-07-23">2026.07.23</time> 社歌とMorning Protocolを公開用音源へコピーし、開発室の参照を `public/audio/studio/` に切り替え。</p>
+            <p><time datetime="2026-07-23">2026.07.23</time> Suno Asset WorkshopのImport Plan Viewerを、普段使いの4ステップ表示と開発者向け折りたたみへ整理。</p>
+            <p><time datetime="2026-07-23">2026.07.23</time> 公開前チェック表へShowroom、Hearing、Suno Import Plan、Private音源混入確認を追加。</p>
+            <p><time datetime="2026-07-20">2026.07.20</time> 通常チャット・設計メモ・EyeBookで、例えと会話から入り技術用語へ進む共通説明スタイルを採用。</p>
+            <p><time datetime="2026-07-20">2026.07.20</time> 🚘️Parkingを一次資料、Archiveを実装史料、EyeBookをDevelopment Chronicleとする連携方針を追加。</p>
+            <p><time datetime="2026-07-20">2026.07.20</time> EyeBookの70資料G Editionを保管・検証し、次回のLibrary ImportからTree Viewへ進む設計とJSON互換条件を記録。</p>
+            <p><time datetime="2026-07-19">2026.07.19</time> EyeBookへSceneコンパイラを追加し、開発室をARRIVAL・TODAY BOARD・LOUNGE・ARCHIVEの4ゾーンへ再編。</p>
+            <p><time datetime="2026-07-19">2026.07.19</time> Creator CompanionのGPT-5.6実生成を確認し、開発室の未処理タスクを提出・公開HP・個人ツール・素材運用へ分離。</p>
+            <p><time datetime="2026-07-16">2026.07.16</time> Shiro's Atelierの部屋・チェキ・動画導線を再編し、開発室とWTFC・AI Labの表示や操作も整理。</p>
+            <p><time datetime="2026-07-15">2026.07.15</time> iCloudの空の投函口を確認し、G&amp;T Path Treeと運用マニュアルへ反映。</p>
+            <p><time datetime="2026-07-14">2026.07.14</time> Shiro Sewing BoxとVideo Workshopの運用を整え、素材整理の導線を強化。</p>
+            <p><time datetime="2026-07-13">2026.07.13</time> 樹冠の灯にGLOWDUST店内BGMとForest Projectorの短編上映枠を追加。</p>
+            <p><time datetime="2026-07-12">2026.07.12</time> WTFC WorkshopとAudio Workshopを整え、森の素材と音の管理導線を拡張。</p>
+            <p><time datetime="2026-07-11">2026.07.11</time> Suno Libraryのフォルダ名を読みやすく整理。動画台帳の運用を開始。</p>
+            <p><time datetime="2026-07-11">2026.07.11</time> INFJのアトリエをAI Music棚へ移動し、Listening Roomに追加。</p>
+            <p><time datetime="2026-07-07">2026.07.07</time> Listening Roomに再生UIと本日のお品書きを追加。</p>
+            <p><time datetime="2026-07-07">2026.07.07</time> Studio LogをG&amp;T 開発室として再設計。</p>
+            <p><time datetime="2026-07-06">2026.07.06</time> Suno曲の整理フローとLibrary棚卸しを開始。</p>
+          </div>
+        </article>
+
+        <article class="studioPinBoard studioTabPanel" id="studio-tab-ui-catalog" role="tabpanel" data-studio-panel="ui-catalog" hidden>
+          <p class="portalDeskLabel">UI Library</p>
+          <h2>UI選択肢カタログ</h2>
+          <p class="studioUiCatalogLead">「なんか寂しい」「もう少しキラッとしたい」を、言葉だけで止めずに選べる形へ。まずはTとこーちゃんが相談するための見本棚です。</p>
+          <aside class="studioUiCatalogNote">
+            <strong>UI LibraryはShowroomへ</strong>
+            <p>UI演出の選択肢カタログは、完成見本としてShowroom側へ移しました。開発室では「提案時に複数案を出す」運用だけ残します。</p>
+            <div class="recordLinks"><a href="./gallery.html#ui-showroom">ShowroomのUI Libraryへ</a></div>
+          </aside>
+          <aside class="studioUiSandboxNote">
+            <strong>B1 試作室候補</strong>
+            <p>UI選択肢は一覧だけで終わらせず、押すと実際に色・カード・線・エフェクトが変わる「体験できる資材置き場」へ育てる。ゲームUI、アプリUI、服やスニーカーのカスタム画面みたいな比較にも使う。</p>
+          </aside>
+          <aside class="studioUiSandboxNote">
+            <strong>Showroomへ移動しました</strong>
+            <p>Material Library / 素材見本室は、完成見本としてShowroom側へ移設しました。開発室には設計メモだけを残します。</p>
+            <div class="recordLinks"><a href="./gallery.html#ui-showroom">Showroomの素材見本室へ</a></div>
+          </aside>
+          <section class="studioTasteLog" aria-label="TのUI好みログ">
+            <header>
+              <span>Preference Log</span>
+              <h3>Tの好みログ</h3>
+            </header>
+            <div class="studioTasteGrid">
+              <article>
+                <strong>好き</strong>
+                <ul>
+                  <li>デパートのフロアマップみたいな案内板</li>
+                  <li>チェキ風・マステ・付箋・紙もの</li>
+                  <li>控えめなキラキラ、光る額縁、ガラス風UI</li>
+                  <li>会社っぽいけど遊び心がある部屋構成</li>
+                  <li>クリックしたくなるアイコン型の操作</li>
+                </ul>
+              </article>
+              <article>
+                <strong>見直したい</strong>
+                <ul>
+                  <li>薄い水色背景に細すぎる文字や線</li>
+                  <li>小さすぎる説明文、詰まって見えるカード</li>
+                  <li>バッジや装飾が本文・アイコンに被る状態</li>
+                  <li>選択肢が見えないまま1案だけ提示される流れ</li>
+                </ul>
+              </article>
+              <article>
+                <strong>次に試す</strong>
+                <ul>
+                  <li>WTFCの本格的な架空世界マップ</li>
+                  <li>ドラクエ風 / デパート案内板風の地図比較</li>
+                  <li>UI演出カタログをEyeBookにも移植</li>
+                  <li>好き・苦手ログを作業判断へ反映</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </article>
+
+        <article class="studioPinBoard studioExternalMemo studioTabPanel" id="studio-tab-bulletin" role="tabpanel" data-studio-panel="bulletin" hidden>
+          <p class="portalDeskLabel">Bulletin &amp; Doors</p>
+          <h2>掲示板</h2>
+          <p>長い制作日記や公開用の読み物はnoteへ。部屋の奥のドアから、ほかの制作部屋へ移動できます。</p>
+          <div class="recordLinks studioDoorLinks" aria-label="G&Tの部屋へ続く扉">
+            <a class="studioDoor doorNote" href="https://note.com/kon_0320"><span>📜</span><strong>note</strong><small>公開ノート</small></a>
+            <a class="studioDoor doorWtfc" href="./world-tree-forest-cafe/index.html"><span>🌳</span><strong>WTFC</strong><small>世界樹の森</small></a>
+            <a class="studioDoor doorLab" href="./ai-lab.html"><span>🧪</span><strong>AI Lab</strong><small>実験室</small></a>
+            <a class="studioDoor doorMusic" href="./music.html"><span>🎵</span><strong>Listening</strong><small>音楽室</small></a>
+            <a class="studioDoor doorShiro" href="./shiro.html"><span>🦊</span><strong>Shiro's</strong><small>白いアトリエ</small></a>
+            <a class="studioDoor doorWorks" href="./gallery.html"><span>✨</span><strong>Showroom</strong><small>受付</small></a>
+          </div>
+          <details class="studioThemeGuide">
+            <summary>各部屋のテーマカラー</summary>
+            <div class="studioThemeGrid">
+              <p><i class="themeSwatch swatchPortal"></i><strong>G&amp;T TOP</strong><span>夜紺・ランタン金・森の緑</span></p>
+              <p><i class="themeSwatch swatchWtfc"></i><strong>WTFC</strong><span>深緑・苔・灯り金</span></p>
+              <p><i class="themeSwatch swatchMusic"></i><strong>Listening Room</strong><span>木目茶・真鍮金・シアン</span></p>
+              <p><i class="themeSwatch swatchLab"></i><strong>AI Lab</strong><span>暗紺・電子シアン・バイオレット</span></p>
+              <p><i class="themeSwatch swatchShiro"></i><strong>Shiro's Atelier</strong><span>白・淡桃・ラベンダー・木</span></p>
+              <p><i class="themeSwatch swatchStudio"></i><strong>G&amp;T 開発室</strong><span>淡い水色・白・木・珈琲</span></p>
+              <p><i class="themeSwatch swatchWorks"></i><strong>Showroom</strong><span>濃紺・VIPゴールド</span></p>
+            </div>
+          </details>
+        </article>
+      </section>
+
+      <footer class="siteFooter musicFooter">
+        <div>
+          <a class="footerBrand" href="./preview.html#top">G&amp;T</a>
+          <span>Studio Log is lovingly in progress.</span>
+        </div>
+        <nav aria-label="Studio Log footer links">
+          <a href="#top">Top</a>
+          <a href="https://note.com/kon_0320">note</a>
+          <a href="./preview.html#top">Portal</a>
+        </nav>
+        <small>© 2026 G&T. All logs are in progress.</small>
+      </footer>
+    </main>
+    <script src="./public/cursor-trails.js"></script>
+    <script src="./public/studio-log.js"></script>
+    <script>
+      (() => {
+        const target = new Date("2026-08-01T00:00:00+09:00");
+        const output = document.querySelector("[data-preopen-days]");
+        if (!output) return;
+
+        const updateCountdown = () => {
+          const now = new Date();
+          const diff = target.getTime() - now.getTime();
+          const days = Math.max(0, Math.ceil(diff / 86400000));
+          output.textContent = `${days} days`;
+          output.setAttribute("aria-label", `プレオープンまで${days}日`);
+        };
+
+        updateCountdown();
+      })();
+
+      (() => {
+        const guide = document.querySelector("[data-building-guide]");
+        if (!guide) return;
+
+        const destinations = {
+          AI_LAB: {
+            title: "AI Lab",
+            route: "thin-blue route",
+            description: "AI実験・小さな遊び・次のアプリ案を試す部屋です。まずはここから実験台へ向かいます。"
+          },
+          MUSIC_STUDIO: {
+            title: "Music Studio",
+            route: "sound-wave route",
+            description: "Suno、BGM、歌ってみた、音の素材をまとめる音楽室。線は音の波みたいに上へ伸びます。"
+          },
+          EYEBOOK: {
+            title: "EyeBook",
+            route: "bookmark route",
+            description: "Parkingメモや資料を、カード・本・ツリーで読みやすくする資料室です。"
+          },
+          WTFC: {
+            title: "World Tree Forest Cafe",
+            route: "branch route",
+            description: "世界樹の森へ降りる入口。枝のような緑の線で、開発室から森側へつながります。"
+          },
+          SHIRO_ATELIER: {
+            title: "Shiro's Atelier",
+            route: "thread route",
+            description: "シロちゃんの物語・作品・チェキ・動画室へ向かう白いアトリエ。糸のような線で案内します。"
+          },
+          ARCHIVE: {
+            title: "Archive",
+            route: "dotted archive route",
+            description: "開発ログ、メモ、完了した作業の保管庫。点線で、静かに地下へ降ります。"
+          }
+        };
+
+        const buttons = [...guide.querySelectorAll("[data-building-destination]")];
+        const routes = [...guide.querySelectorAll("[data-building-route]")];
+        const title = guide.querySelector("[data-building-title]");
+        const routeLabel = guide.querySelector("[data-building-route-label]");
+        const description = guide.querySelector("[data-building-description]");
+        const link = guide.querySelector("[data-building-link]");
+        let routeAudioContext;
+        const playRouteSound = () => {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) return;
+          routeAudioContext = routeAudioContext || new AudioContextClass();
+          if (routeAudioContext.state === "suspended") routeAudioContext.resume();
+          const now = routeAudioContext.currentTime;
+          [784, 1047, 1319, 1568].forEach((frequency, index) => {
+            const oscillator = routeAudioContext.createOscillator();
+            const gain = routeAudioContext.createGain();
+            oscillator.type = "triangle";
+            oscillator.frequency.setValueAtTime(frequency, now + index * 0.055);
+            gain.gain.setValueAtTime(0.0001, now + index * 0.055);
+            gain.gain.exponentialRampToValueAtTime(0.026, now + index * 0.055 + 0.012);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + index * 0.055 + 0.18);
+            oscillator.connect(gain);
+            gain.connect(routeAudioContext.destination);
+            oscillator.start(now + index * 0.055);
+            oscillator.stop(now + index * 0.055 + 0.2);
+          });
+        };
+
+        const selectDestination = (id, targetHref) => {
+          const data = destinations[id];
+          if (!data) return;
+          playRouteSound();
+          buttons.forEach((button) => {
+            button.classList.toggle("is-active", button.dataset.buildingDestination === id);
+          });
+          routes.forEach((route) => {
+            route.classList.remove("is-active");
+            if (route.dataset.buildingRoute === id) {
+              route.getBoundingClientRect();
+              route.classList.add("is-active");
+            }
+          });
+          title.textContent = data.title;
+          routeLabel.textContent = data.route;
+          description.textContent = data.description;
+          link.href = targetHref;
+        };
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            selectDestination(button.dataset.buildingDestination, button.dataset.targetHref);
+          });
+        });
+
+        link.addEventListener("click", (event) => {
+          if (link.getAttribute("href") !== "#studio-tab-notebook") return;
+          const notebookTab = document.querySelector('[data-studio-tab="notebook"]');
+          if (!notebookTab) return;
+          event.preventDefault();
+          notebookTab.click();
+          document.querySelector("#studio-tab-notebook")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      })();
+
+
+    </script>
+  </body>
+</html>

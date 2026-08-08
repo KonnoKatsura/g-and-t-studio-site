@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="G&T Studio AI Labは、AI制作の過程、実験ログ、制作メモを置く研究室です。"
+    />
+    <title>AI Lab | G&T Studio</title>
+    <link rel="icon" type="image/svg+xml" href="/g-and-t-studio-site/assets/favicon-ai-lab-BwqgDCtG.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" crossorigin href="/g-and-t-studio-site/assets/styles-RLRClg9J.css">
+  </head>
+  <body class="musicPage labPage" data-cursor-trail="lab">
+    <main>
+      <header class="musicHero labHero" id="top">
+        <div class="siteMenu" aria-label="ページメニュー">
+          <a class="siteMenuBrand" href="./preview.html#top">G&amp;T</a>
+          <input class="siteMenuSwitch" id="ai-lab-menu" type="checkbox" />
+          <label class="siteMenuButton" for="ai-lab-menu" aria-label="メニューを開く"><span aria-hidden="true">☰</span></label>
+          <nav class="siteMenuPanel" aria-label="ページナビゲーション">
+            <a class="siteMenuHome" href="./preview.html#top">HOME</a>
+            <span class="siteMenuHeading">WORLDS</span>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="./world-tree-forest-cafe/index.html#home">🌳 World Tree</a>
+            <a href="./shiro.html">🦊 Shiro Atelier</a>
+            <a href="./music.html">🎵 Listening Room</a>
+            <a href="./ai-lab.html">🧪 AI Lab</a>
+            <a href="./notes.html">🛠️ Studio Log</a>
+            <a href="./gallery.html">🧭 Works</a>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="./preview.html#socials">SNS</a>
+            <a href="./hearing.html#contact">Contact</a>
+          </nav>
+        </div>
+        <section class="musicHeroInner">
+          <p class="portalSubtitle">Creating with AI</p>
+          <h1>AI Lab</h1>
+          <div class="labStartPrompt" aria-label="AI Lab start prompt">
+            <span>INSERT IDEA</span>
+            <button class="labPressStart" type="button" data-lab-start>▷ PRESS START ◁</button>
+          </div>
+          <p>AIと一緒に、<br />今日も何か作っています。</p>
+        </section>
+      </header>
+
+      <section class="musicSection labMapBulletin labMapBulletinLead" aria-label="AI Lab bulletin">
+        <div class="pixelBulletinScreen">
+          <span>2026.07.07</span>
+          <p>
+            「あの日、何となく集めていた素材は、<br />
+            未来の作品のための&quot;世界の部品&quot;だった。」
+          </p>
+          <strong>── Glimmerpou、歩き始める。 🌳🦊☕✨</strong>
+        </div>
+      </section>
+
+      <section class="musicSection labGameMenu" aria-label="AI Lab floor map">
+        <div class="labMapBoard">
+          <div class="labMenuScreen">
+            <div class="labMenuHeader">
+              <span>FLOOR MAP</span>
+              <strong>SELECT AREA</strong>
+            </div>
+            <nav class="labFloorMap" aria-label="AI Lab floor areas">
+              <a class="labFloorSpot labFloorPlayable" href="#playable-experiments" aria-label="Playable Experiments area">
+                <span>Playable Experiments</span>
+                <small>世界樹ウォーキング</small>
+              </a>
+              <a class="labFloorSpot labFloorPrompt" href="#mini-apps" aria-label="Prompt Lab area">
+                <span>Prompt Lab</span>
+                <small>ルーレット</small>
+              </a>
+              <a class="labFloorSpot labFloorPixel" href="#playable-experiments" aria-label="Pixel Workshop area">
+                <span>Pixel Workshop</span>
+                <small>素材とマップ</small>
+              </a>
+              <a class="labFloorSpot labFloorMini" href="#mini-apps" aria-label="Mini Apps area">
+                <span>Mini Apps</span>
+                <small>おもしろ実験箱</small>
+              </a>
+              <a class="labFloorSpot labFloorMusic" href="#glimmervox" aria-label="AI Music Test area">
+                <span>AI Music Test</span>
+                <small>音の実験</small>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section class="musicSection labMiniApps labLegacyShelf" id="mini-apps" aria-label="Mini app ideas">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Legacy Mini Apps</p>
+          <h2>おもしろ実験箱</h2>
+          <p>昔は一世を風靡した、小さなJavaScript実験棚。少し老朽化しても、ここから生まれた遊びは開発室やカフェで今も動いています。</p>
+        </div>
+        <div class="miniAppGrid">
+          <article>
+            <span>🧪</span>
+            <h3>Pixel Walker</h3>
+            <p>世界樹を散歩。</p>
+          </article>
+          <article>
+            <span>🎵</span>
+            <h3>3和音メーカー</h3>
+            <p>気分を選んで、短いピコピコ和音を鳴らす。</p>
+            <div class="triadControls" role="group" aria-label="3和音の雰囲気を選ぶ">
+              <button class="miniAppButton isActive" type="button" data-triad="forest">FOREST</button>
+              <button class="miniAppButton" type="button" data-triad="cafe">CAFE</button>
+              <button class="miniAppButton" type="button" data-triad="glow">GLOW</button>
+            </div>
+            <button class="miniAppButton triadPlay" type="button" data-triad-play>▶ PLAY CHORD</button>
+            <output class="miniAppResult" data-triad-result>C - E - G</output>
+          </article>
+          <article>
+            <span>🎹</span>
+            <h3>Chiptune Lab</h3>
+            <p>8bit音源実験。</p>
+          </article>
+          <article>
+            <span>🎨</span>
+            <h3>Pixel Generator</h3>
+            <p>ドット絵変換。</p>
+          </article>
+          <article>
+            <span>🎲</span>
+            <h3>Prompt Roulette</h3>
+            <p>ランダムプロンプト。</p>
+            <button class="miniAppButton" type="button" data-mini-app="prompt">回してみる</button>
+            <output class="miniAppResult" data-mini-result="prompt">PRESS TO ROLL</output>
+          </article>
+          <article>
+            <span>☕</span>
+            <h3>CSS Latte Generator</h3>
+            <p>今日のコーヒー。</p>
+            <button class="miniAppButton" type="button" data-mini-app="latte">淹れてみる</button>
+            <output class="miniAppResult" data-mini-result="latte">ORDER PLEASE</output>
+          </article>
+          <article>
+            <span>📜</span>
+            <h3>AI名言ジェネレーター</h3>
+            <p>開発室の名言。</p>
+            <button class="miniAppButton" type="button" data-mini-app="quote">Generate</button>
+            <output class="miniAppResult" data-mini-result="quote">QUOTE READY</output>
+          </article>
+          <article>
+            <span>🧠</span>
+            <h3>今日の実験</h3>
+            <p>本日の研究テーマ。</p>
+            <button class="miniAppButton" type="button" data-mini-app="experiment">Generate</button>
+            <output class="miniAppResult" data-mini-result="experiment">STANDBY</output>
+          </article>
+          <article>
+            <span>🐛</span>
+            <h3>バグ発見ボタン</h3>
+            <p>仕様かもしれない。</p>
+            <button class="miniAppButton" type="button" data-mini-app="bug">SCAN</button>
+            <output class="miniAppResult" data-mini-result="bug">NO BUGS YET</output>
+          </article>
+          <article>
+            <span>🏆</span>
+            <h3>Achievement</h3>
+            <p>実験の称号。</p>
+            <button class="miniAppButton" type="button" data-mini-app="achievement">Unlock</button>
+            <output class="miniAppResult" data-mini-result="achievement">LOCKED</output>
+          </article>
+        </div>
+      </section>
+
+      <section class="musicSection glimmervoxLab" id="glimmervox" aria-label="Glimmervox prototype">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Playable Experiment 003</p>
+          <h2>Glimmervox Prototype</h2>
+          <p>ぐーちゃんのきらめきとShadowMoguのあたたかさを、架空DTMプラグインとして鳴らしてみる小さな音実験。</p>
+        </div>
+        <div class="glimmervoxPlugin" data-glimmervox>
+          <div class="glimmervoxHeader">
+            <div>
+              <span>WORLD TREE AUDIO LAB</span>
+              <h3>Glimmervox</h3>
+            </div>
+            <strong data-glimmervox-mode-label>Light Shard Voice</strong>
+          </div>
+          <div class="glimmervoxDeck">
+            <div class="glimmervoxDisplay">
+              <div class="glimmervoxMascot" aria-hidden="true">🦊</div>
+              <div class="glimmervoxWave" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="glimmervoxOrb" data-glimmervox-orb aria-hidden="true"></div>
+              <p data-glimmervox-status>Light Shard待機中。</p>
+            </div>
+            <div class="glimmervoxControls" aria-label="Glimmervox controls">
+              <label>
+                <span>Sparkle</span>
+                <input type="range" min="0" max="100" value="72" data-glimmervox-control="sparkle" />
+              </label>
+              <label>
+                <span>Mogu Warmth</span>
+                <input type="range" min="0" max="100" value="58" data-glimmervox-control="warmth" />
+              </label>
+              <label>
+                <span>Forest Echo</span>
+                <input type="range" min="0" max="100" value="46" data-glimmervox-control="echo" />
+              </label>
+              <label>
+                <span>Light Shard</span>
+                <input type="range" min="0" max="100" value="78" data-glimmervox-control="shard" />
+              </label>
+            </div>
+            <div class="glimmervoxPanel">
+              <div class="glimmervoxModes" aria-label="Glimmervox mode">
+                <button class="isActive" type="button" data-glimmervox-mode="light">Light Shard</button>
+                <button type="button" data-glimmervox-mode="forest">Forest Echo</button>
+                <button type="button" data-glimmervox-mode="cafe">Cafe Room</button>
+                <button type="button" data-glimmervox-mode="glowdust">Glowdust</button>
+              </div>
+              <button class="glimmervoxPreview" type="button" data-glimmervox-play>鳴らす</button>
+              <button class="glimmervoxPreview glimmervoxShardPreview" type="button" data-glimmervox-shard-play>
+                光のかけらSE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="musicSection pixelTalkCafe" id="pixel-talk-cafe" aria-label="Pixel Sound Talk Cafe">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Playable Experiment 002</p>
+          <h2>Pixel &amp; Sound &amp; Talk Cafe</h2>
+          <p>キャラを選んでマス目に置くと、ひと言しゃべって、今日のコーヒーをおすすめして、短い3和音が鳴る小さな実験カフェ。</p>
+        </div>
+        <div class="pixelCafeConsole">
+          <div class="pixelCafeRoster" aria-label="キャラクター選択">
+            <button class="pixelCafeCharacter isSelected" type="button" data-cafe-character="t">
+              <span>👩</span>
+              <strong>T</strong>
+            </button>
+            <button class="pixelCafeCharacter" type="button" data-cafe-character="g">
+              <span>😊</span>
+              <strong>G</strong>
+            </button>
+            <button class="pixelCafeCharacter" type="button" data-cafe-character="ko">
+              <span>🤖</span>
+              <strong>こーちゃん</strong>
+            </button>
+            <button class="pixelCafeCharacter" type="button" data-cafe-character="andrew">
+              <span>🔍</span>
+              <strong>Andrew</strong>
+            </button>
+            <button class="pixelCafeCharacter" type="button" data-cafe-character="glimmerpou">
+              <span>🦊</span>
+              <strong>glimmerpou</strong>
+            </button>
+            <button class="pixelCafeCharacter" type="button" data-cafe-character="shiro">
+              <span>🧵</span>
+              <strong>シロちゃん</strong>
+            </button>
+            <button class="pixelCafeCharacter" type="button" data-cafe-character="mogu">
+              <span>●</span>
+              <strong>ShadowMogu</strong>
+            </button>
+          </div>
+          <div class="pixelCafeStage">
+            <div class="pixelCafeControls" aria-label="Pixel Cafe controls">
+              <button class="pixelCafeIconButton" type="button" data-cafe-reset aria-label="グリッドをリセット">↻</button>
+              <button class="pixelCafeDoneButton" type="button" data-cafe-done>DONE</button>
+            </div>
+            <div class="pixelCafeGrid" data-pixel-cafe-grid aria-label="Pixel Cafe 8x8 grid"></div>
+          </div>
+          <aside class="pixelCafeCoffeePanel" aria-label="本日のおすすめコーヒー">
+            <span>Today's Coffee</span>
+            <div class="pixelCoffeeArt" data-cafe-coffee-art aria-hidden="true">☕</div>
+            <h3 data-cafe-coffee-name>CSSラテ</h3>
+            <p data-cafe-coffee-desc>見た目だけ急に美しくなります。</p>
+          </aside>
+          <div class="pixelCafeStatus" aria-live="polite">
+            <div class="pixelCafeSpeaker">
+              <span class="pixelCafeAvatar" data-cafe-avatar aria-hidden="true">👩</span>
+              <div class="pixelCafeBubble">
+                <span data-cafe-selected>SELECT：T</span>
+                <strong data-cafe-line>T「悪ノリ採用！」</strong>
+                <p data-cafe-coffee>本日のおすすめ：CSSラテ。見た目だけ急に美しくなります。</p>
+              </div>
+            </div>
+          </div>
+          <div class="pixelCafeCompletion" aria-label="Pixel Cafe completion board">
+            <span>Completion Board</span>
+            <div class="pixelCafeCompletionGrid">
+              <strong data-cafe-character-count>0 / 7 CHARACTERS</strong>
+              <strong data-cafe-coffee-count>0 / 7 COFFEE</strong>
+              <strong data-cafe-rare-count>0 / 1 SSR</strong>
+            </div>
+            <p data-cafe-achievement>目指せ！アップルパイセット 🥧✨</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="musicSection labPlayable" id="playable-experiments" aria-label="Playable experiments">
+        <div class="musicSectionHeader">
+          <p class="portalDeskLabel">Playable Experiments</p>
+          <h2>遊べる実験</h2>
+          <p>完成品ではなく、触れる試作品。AI Labの小さな実験台として育てていきます。</p>
+        </div>
+        <article class="playableExperimentCard">
+          <div class="pixelForestPreview" aria-hidden="true">
+            <div class="pixelMap">
+              <img class="pixelTile tileA tileA1" src="/g-and-t-studio-site/assets/grass-a-BPFaTvAJ.png" alt="" />
+              <img class="pixelTile tileB tileB1" src="/g-and-t-studio-site/assets/grass-b-D1G3NVeS.png" alt="" />
+              <img class="pixelTile tileA tileA2" src="/g-and-t-studio-site/assets/grass-a-BPFaTvAJ.png" alt="" />
+              <img class="pixelTile tileB tileB2" src="/g-and-t-studio-site/assets/grass-b-D1G3NVeS.png" alt="" />
+              <img class="pixelTree treeOne" src="/g-and-t-studio-site/assets/tree-Celf_geC.png" alt="" />
+              <img class="pixelTree treeTwo" src="/g-and-t-studio-site/assets/tree-Celf_geC.png" alt="" />
+              <img class="pixelCottage" src="/g-and-t-studio-site/assets/cottage-D0yeOwMS.png" alt="" />
+              <img class="pixelCrystal" src="/g-and-t-studio-site/assets/crystal-Din1Otu-.png" alt="" />
+              <img class="pixelBerry" src="/g-and-t-studio-site/assets/berry-C6hAUHAX.png" alt="" />
+              <img class="pixelGoo" src="/g-and-t-studio-site/assets/goo-main-BIJ_w1Y_.png" alt="" />
+            </div>
+          </div>
+          <div class="playableExperimentCopy">
+            <span>Playable Experiment 001</span>
+            <h3>世界樹の森ウォーキング</h3>
+            <p>
+              世界樹の森を小さなドット絵で散歩する、AI Labの遊べる実験です。
+              まずは静かなプレビューから。将来はCanvasで矢印キー移動に拡張予定。
+            </p>
+            <div class="playableExperimentMeta" aria-label="experiment status">
+              <span>HTML / CSS</span>
+              <span>軽いJS予定</span>
+              <span>Prototype</span>
+            </div>
+            <div class="recordLinks">
+              <a href="./world-tree-forest-cafe/index.html#home">World Treeへ</a>
+              <a href="./notes.html">開発室へ</a>
+            </div>
+          </div>
+        </article>
+        <div class="playableReferenceGrid" aria-label="世界樹の森ウォーキング参考素材">
+          <article>
+            <img src="/g-and-t-studio-site/assets/sprite-sheet-reference-BB5KYGPP.png" alt="世界樹の森ウォーキング用のドット絵素材ボード" />
+            <div>
+              <span>Sprite Sheet / 素材整理中</span>
+              <h3>森マップの材料</h3>
+              <p>タイル、木、家、歩きぐーちゃん、アイテムを整理して、将来のCanvasマップへ育てる素材ボード。</p>
+            </div>
+          </article>
+          <article>
+            <img src="/g-and-t-studio-site/assets/dialogue-ui-reference-DROrbdgi.png" alt="ゲーム風の会話ウィンドウ参考画像" />
+            <div>
+              <span>Future UI / 会話実験</span>
+              <h3>話しかける仕組み</h3>
+              <p>ShadowMoguや森の住人と会話するための、ゲーム風メッセージUI候補。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="musicSection musicProcess labRoutes" id="routes">
+        <div>
+          <p class="portalDeskLabel">Route Map</p>
+          <h2>完成品と読み物へつなぐ</h2>
+          <p>
+            AI Labで制作過程を読み、Listening Roomで完成品を聴く。考えたことや長い話はnoteへ。
+            この3つを行き来できるように育てます。
+          </p>
+        </div>
+        <div class="labRouteActions">
+          <a href="./music.html">Listening Roomへ</a>
+          <a href="https://note.com/kon_0320">noteへ</a>
+        </div>
+      </section>
+
+      <footer class="siteFooter musicFooter">
+        <div>
+          <a class="footerBrand" href="./preview.html#top">G&amp;T</a>
+          <span>AI Lab is lovingly in progress.</span>
+        </div>
+        <div class="neonSocials" aria-label="SNS links">
+          <a class="neonSocial neonX" href="https://x.com/glimmerpou0320" aria-label="X">
+            <span class="socialGlyph socialGlyphX" aria-hidden="true"></span>
+          </a>
+          <a class="neonSocial neonInstagram" href="https://www.instagram.com/glimmerpou0320?igsh=ZmdraHk1NXNtcXUz&utm_source=qr" aria-label="Instagram">
+            <span class="socialGlyph socialGlyphInstagram" aria-hidden="true"></span>
+          </a>
+          <a class="neonSocial neonYoutube" href="https://www.youtube.com/channel/UCjBcU333OczMveqR_0qvKAw" aria-label="YouTube">
+            <span class="socialGlyph socialGlyphYoutube" aria-hidden="true"></span>
+          </a>
+          <a class="neonSocial neonNote" href="https://note.com/kon_0320" aria-label="note">
+            <span class="socialGlyph socialGlyphNote" aria-hidden="true"></span>
+          </a>
+        </div>
+        <nav aria-label="AI Lab footer links">
+          <a href="#top">Top</a>
+          <a href="./notes.html">Studio Log</a>
+          <a href="./music.html">Music</a>
+          <a href="./preview.html#top">Portal</a>
+        </nav>
+        <small>© 2026 G&T Studio. All experiments are in progress.</small>
+      </footer>
+    </main>
+    <script src="./public/cursor-trails.js"></script>
+    <script src="./public/ai-lab-start.js"></script>
+    <script>
+      (() => {
+        const miniApps = {
+          prompt: [
+            "シロちゃんを巨大化させずに動画化できるか？",
+            "世界樹の森にNPCを1人追加する",
+            "AI Labの背景をドット絵化する",
+            "3和音BGMを作ってみる",
+            "CSSだけで小さなアイコンを動かす",
+            "G&T開発室の社訓を1つ増やす",
+          ],
+          latte: [
+            "CSSラテ：見た目だけ急に美しくなります。",
+            "Reactロースト：コンポーネント化したくなる香り。",
+            "Three.jsスペシャル：飲むと何でも3Dにしたくなります。",
+            "デバッグブラック：バグが見えるようになります。直るとは言ってません。",
+            "8割完成ブレンド：今日はここまでが言えるようになります。",
+            "仕様変更ブレンド：飲むたびにアイデアが増えます。",
+          ],
+          quote: [
+            "😊 G「まず8割完成。」",
+            "🤖 こーちゃん「CSSは嘘をつきません。」",
+            "🔍 Andrew「調べたら夢が一つ増えていました。」",
+            "🦊 シロちゃん「巨大化も実験です。」",
+            "👩 T「悪ノリ採用！」",
+          ],
+          experiment: [
+            "Experiment 038：世界樹の森にベンチを置く",
+            "Experiment 052：シロちゃん巨大化防止計画",
+            "Experiment 099：3和音BGM制作",
+            "Experiment 145：Pixel WalkerにNPC追加",
+            "Experiment 201：開発室に新しいコーヒーを追加",
+          ],
+          bug: [
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "バグは見つかりませんでした。……たぶん。",
+            "🐛 バグを発見しました。仕様でした。",
+          ],
+          achievement: [
+            "Achievement Unlocked：🏆 Prompt Roller",
+            "Achievement Unlocked：🏆 Coffee Lover",
+            "Achievement Unlocked：🏆 Pixel Explorer",
+            "Achievement Unlocked：🏆 Prototype Builder",
+            "Achievement Unlocked：🏆 Experiment Complete",
+            "Achievement Unlocked：🏆 AI Lab Resident",
+            "Achievement Unlocked：🏆 World Tree Walker",
+          ],
+        };
+
+        document.querySelectorAll("[data-mini-app]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const type = button.dataset.miniApp;
+            const result = document.querySelector(`[data-mini-result="${type}"]`);
+            const entries = miniApps[type] || [];
+            const text = entries[Math.floor(Math.random() * entries.length)];
+
+            if (!result || !text) {
+              return;
+            }
+
+            result.textContent = text;
+            result.classList.remove("isRolling");
+            void result.offsetWidth;
+            result.classList.add("isRolling");
+          });
+        });
+      })();
+
+      (() => {
+        const playButton = document.querySelector("[data-triad-play]");
+        const result = document.querySelector("[data-triad-result]");
+        const choices = [...document.querySelectorAll("[data-triad]")];
+        if (!playButton || !result || !choices.length) return;
+
+        const triads = {
+          forest: { label: "C - E - G", notes: [261.63, 329.63, 392], wave: "square" },
+          cafe: { label: "F - A - C", notes: [349.23, 440, 523.25], wave: "sine" },
+          glow: { label: "A - C# - E", notes: [440, 554.37, 659.25], wave: "triangle" },
+        };
+        let selected = "forest";
+        let context = null;
+
+        choices.forEach((button) => {
+          button.addEventListener("click", () => {
+            selected = button.dataset.triad;
+            choices.forEach((choice) => choice.classList.toggle("isActive", choice === button));
+            result.textContent = triads[selected].label;
+          });
+        });
+
+        playButton.addEventListener("click", async () => {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContext) {
+            result.textContent = "WEB AUDIO NOT SUPPORTED";
+            return;
+          }
+          context = context || new AudioContext();
+          if (context.state === "suspended") await context.resume();
+          const now = context.currentTime;
+          const active = triads[selected];
+          active.notes.forEach((frequency, index) => {
+            const oscillator = context.createOscillator();
+            const gain = context.createGain();
+            const start = now + index * 0.075;
+            oscillator.type = active.wave;
+            oscillator.frequency.setValueAtTime(frequency, start);
+            gain.gain.setValueAtTime(0.0001, start);
+            gain.gain.linearRampToValueAtTime(0.06, start + 0.018);
+            gain.gain.exponentialRampToValueAtTime(0.001, start + 0.62);
+            oscillator.connect(gain).connect(context.destination);
+            oscillator.start(start);
+            oscillator.stop(start + 0.68);
+          });
+          result.textContent = `NOW PLAYING：${active.label}`;
+          result.classList.remove("isRolling");
+          void result.offsetWidth;
+          result.classList.add("isRolling");
+        });
+      })();
+
+      (() => {
+        const plugin = document.querySelector("[data-glimmervox]");
+
+        if (!plugin) {
+          return;
+        }
+
+        const playButton = plugin.querySelector("[data-glimmervox-play]");
+        const shardButton = plugin.querySelector("[data-glimmervox-shard-play]");
+        const modeLabel = plugin.querySelector("[data-glimmervox-mode-label]");
+        const status = plugin.querySelector("[data-glimmervox-status]");
+        const orb = plugin.querySelector("[data-glimmervox-orb]");
+        const controls = {
+          sparkle: plugin.querySelector('[data-glimmervox-control="sparkle"]'),
+          warmth: plugin.querySelector('[data-glimmervox-control="warmth"]'),
+          echo: plugin.querySelector('[data-glimmervox-control="echo"]'),
+          shard: plugin.querySelector('[data-glimmervox-control="shard"]'),
+        };
+        const modes = {
+          light: { label: "Light Shard Voice", base: 659.25, color: "#ffe28b", wave: "sine", text: "光のかけらを少し鳴らしました。" },
+          forest: { label: "Forest Echo", base: 493.88, color: "#78f0a8", wave: "triangle", text: "森の奥で反射する小さな声。" },
+          cafe: { label: "Cafe Room", base: 392, color: "#ffb86b", wave: "sine", text: "カフェの灯りに溶ける、あたたかい残響。" },
+          glowdust: { label: "Glowdust Mode", base: 783.99, color: "#ff78f2", wave: "triangle", text: "GLOWDUSTの粒子が少し跳ねました。" },
+        };
+
+        let activeMode = "light";
+        let audioContext = null;
+
+        function controlValue(key) {
+          return Number(controls[key]?.value || 0) / 100;
+        }
+
+        function setMode(mode) {
+          activeMode = mode;
+          const data = modes[mode];
+          modeLabel.textContent = data.label;
+          status.textContent = `${data.label} / ${data.text}`;
+          orb.style.setProperty("--glimmervox-accent", data.color);
+          plugin.querySelectorAll("[data-glimmervox-mode]").forEach((button) => {
+            button.classList.toggle("isActive", button.dataset.glimmervoxMode === mode);
+          });
+        }
+
+        async function ensureAudio() {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+
+          if (!AudioContext) {
+            return null;
+          }
+
+          audioContext = audioContext || new AudioContext();
+
+          if (audioContext.state === "suspended") {
+            await audioContext.resume();
+          }
+
+          return audioContext;
+        }
+
+        async function playGlimmervox() {
+          const context = await ensureAudio();
+
+          if (!context) {
+            status.textContent = "このブラウザではWeb Audioが使えないみたいです。";
+            return;
+          }
+
+          const mode = modes[activeMode];
+          const now = context.currentTime;
+          const sparkle = controlValue("sparkle");
+          const warmth = controlValue("warmth");
+          const echo = controlValue("echo");
+          const shard = controlValue("shard");
+          const output = context.createGain();
+          const filter = context.createBiquadFilter();
+          const delay = context.createDelay();
+          const feedback = context.createGain();
+
+          output.gain.setValueAtTime(0.0001, now);
+          output.gain.linearRampToValueAtTime(0.12 + warmth * 0.075, now + 0.035);
+          output.gain.exponentialRampToValueAtTime(0.001, now + 1.25 + echo * 0.6);
+          filter.type = "lowpass";
+          filter.frequency.setValueAtTime(1300 + sparkle * 3400, now);
+          delay.delayTime.setValueAtTime(0.08 + echo * 0.26, now);
+          feedback.gain.setValueAtTime(0.16 + echo * 0.26, now);
+
+          filter.connect(output).connect(context.destination);
+          filter.connect(delay).connect(feedback).connect(delay);
+          delay.connect(output);
+
+          [0, 4, 7, 12].forEach((step, index) => {
+            const oscillator = context.createOscillator();
+            const gain = context.createGain();
+            const start = now + index * (0.055 + shard * 0.035);
+            const frequency = mode.base * (2 ** (step / 12)) + sparkle * 28;
+
+            oscillator.type = mode.wave;
+            oscillator.frequency.setValueAtTime(frequency, start);
+            gain.gain.setValueAtTime(0.0001, start);
+            gain.gain.linearRampToValueAtTime(0.055 + shard * 0.045, start + 0.025);
+            gain.gain.exponentialRampToValueAtTime(0.001, start + 0.42 + echo * 0.22);
+            oscillator.connect(gain).connect(filter);
+            oscillator.start(start);
+            oscillator.stop(start + 0.55 + echo * 0.36);
+          });
+
+          status.textContent = `${mode.label} / ${mode.text}`;
+          plugin.classList.remove("isPlaying");
+          void plugin.offsetWidth;
+          plugin.classList.add("isPlaying");
+        }
+
+        async function playLightShardDrop() {
+          const context = await ensureAudio();
+
+          if (!context) {
+            status.textContent = "このブラウザではWeb Audioが使えないみたいです。";
+            return;
+          }
+
+          const now = context.currentTime;
+          const master = context.createGain();
+          const sparkleFilter = context.createBiquadFilter();
+          const delay = context.createDelay();
+          const feedback = context.createGain();
+
+          master.gain.setValueAtTime(0.0001, now);
+          master.gain.linearRampToValueAtTime(0.18, now + 0.018);
+          master.gain.exponentialRampToValueAtTime(0.001, now + 1.15);
+          sparkleFilter.type = "highpass";
+          sparkleFilter.frequency.setValueAtTime(520, now);
+          delay.delayTime.setValueAtTime(0.16, now);
+          feedback.gain.setValueAtTime(0.27, now);
+          sparkleFilter.connect(master).connect(context.destination);
+          sparkleFilter.connect(delay).connect(feedback).connect(delay);
+          delay.connect(master);
+
+          [
+            [1567.98, 0, 0.12, "triangle"],
+            [2093, 0.075, 0.16, "sine"],
+            [2637.02, 0.17, 0.12, "triangle"],
+            [1046.5, 0.29, 0.24, "sine"],
+          ].forEach(([frequency, delayTime, duration, type]) => {
+            const oscillator = context.createOscillator();
+            const gain = context.createGain();
+            const start = now + delayTime;
+
+            oscillator.type = type;
+            oscillator.frequency.setValueAtTime(frequency, start);
+            oscillator.frequency.exponentialRampToValueAtTime(frequency * 0.72, start + duration);
+            gain.gain.setValueAtTime(0.0001, start);
+            gain.gain.linearRampToValueAtTime(0.1, start + 0.016);
+            gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+            oscillator.connect(gain).connect(sparkleFilter);
+            oscillator.start(start);
+            oscillator.stop(start + duration + 0.04);
+          });
+
+          const landing = context.createOscillator();
+          const landingGain = context.createGain();
+          const landingTime = now + 0.42;
+
+          landing.type = "sine";
+          landing.frequency.setValueAtTime(392, landingTime);
+          landing.frequency.exponentialRampToValueAtTime(261.63, landingTime + 0.28);
+          landingGain.gain.setValueAtTime(0.0001, landingTime);
+          landingGain.gain.linearRampToValueAtTime(0.08, landingTime + 0.03);
+          landingGain.gain.exponentialRampToValueAtTime(0.001, landingTime + 0.46);
+          landing.connect(landingGain).connect(master);
+          landing.start(landingTime);
+          landing.stop(landingTime + 0.5);
+
+          setMode("light");
+          status.textContent = "ぐーちゃんが光のかけらを、ころん。きらきら...";
+          plugin.classList.remove("isPlaying");
+          void plugin.offsetWidth;
+          plugin.classList.add("isPlaying");
+        }
+
+        plugin.querySelectorAll("[data-glimmervox-mode]").forEach((button) => {
+          button.addEventListener("click", () => setMode(button.dataset.glimmervoxMode));
+        });
+
+        Object.values(controls).forEach((control) => {
+          control?.addEventListener("input", () => {
+            const brightness = 0.65 + controlValue("sparkle") * 0.55;
+            const size = 28 + controlValue("shard") * 34;
+            orb.style.setProperty("--glimmervox-brightness", brightness);
+            orb.style.setProperty("--glimmervox-size", `${size}px`);
+          });
+        });
+
+        playButton?.addEventListener("click", () => {
+          playGlimmervox();
+        });
+        shardButton?.addEventListener("click", () => {
+          playLightShardDrop();
+        });
+        setMode(activeMode);
+      })();
+
+      (() => {
+        const grid = document.querySelector("[data-pixel-cafe-grid]");
+        const selectedLabel = document.querySelector("[data-cafe-selected]");
+        const lineOutput = document.querySelector("[data-cafe-line]");
+        const coffeeOutput = document.querySelector("[data-cafe-coffee]");
+        const cafeAvatar = document.querySelector("[data-cafe-avatar]");
+        const coffeeArt = document.querySelector("[data-cafe-coffee-art]");
+        const coffeeName = document.querySelector("[data-cafe-coffee-name]");
+        const coffeeDesc = document.querySelector("[data-cafe-coffee-desc]");
+        const resetButton = document.querySelector("[data-cafe-reset]");
+        const doneButton = document.querySelector("[data-cafe-done]");
+        const characterCount = document.querySelector("[data-cafe-character-count]");
+        const coffeeCount = document.querySelector("[data-cafe-coffee-count]");
+        const rareCount = document.querySelector("[data-cafe-rare-count]");
+        const achievementOutput = document.querySelector("[data-cafe-achievement]");
+
+        if (!grid || !selectedLabel || !lineOutput || !coffeeOutput || !cafeAvatar || !coffeeArt || !coffeeName || !coffeeDesc) {
+          return;
+        }
+
+        const characters = {
+          t: { icon: "👩", name: "T", sound: "sparkle", coffee: "Tのおすすめ：仕様変更ブレンド。飲むたびにアイデアが増えます。", lines: ["悪ノリ採用！", "これは一旦やってみたい。", "創作欲、まだ残ってます。"] },
+          g: { icon: "😊", name: "G", sound: "chime", coffee: "Gのおすすめ：8割完成ブレンド。今日はここまでが言えるようになります。", lines: ["まず8割完成。", "半年後を考えると、この設計がよさそう。", "いいね、育てよう。"] },
+          ko: { icon: "🤖", name: "こーちゃん", sound: "beep", coffee: "こーちゃんのおすすめ：デバッグブラック。バグが見えるようになります。直るとは言ってません。", lines: ["CSSは嘘をつきません。", "実装できます。", "保守性を少しだけ見ます。"] },
+          andrew: { icon: "🔍", name: "Andrew", sound: "ping", coffee: "Andrewのおすすめ：Andrewサーチ珈琲。調べたら夢が一つ増えます。", lines: ["調べたら夢が一つ増えていました。", "参考事例あります。", "検索継続中です。"] },
+          glimmerpou: { icon: "🦊", name: "glimmerpou", sound: "piko", coffee: "glimmerpouのおすすめ：glimmer森ラテ。光のかけらが少し入っています。", lines: ["森を歩こう。", "光のかけら、落としました。", "カフェまで案内するよ。"] },
+          shiro: { icon: "🧵", name: "シロちゃん", sound: "nyan", coffee: "シロちゃんのおすすめ：シロちゃんミルク。ぬいぐるみペットにもやさしい味。", lines: ["巨大化も実験です。", "糸巻き、持ってきました。", "ぬいぐるみペット専門店へようこそ。"] },
+          mogu: { icon: "●", name: "ShadowMogu", sound: "low", coffee: "ShadowMoguのおすすめ：ShadowMoguブレンド。影なのに、あたたかいです。", lines: ["影から見守っています。", "光るもの、好きです。", "ポットパイは半分こ。"] },
+        };
+
+        const coffeeMenus = [
+          { art: "☕", name: "CSSラテ", desc: "見た目だけ急に美しくなります。" },
+          { art: "🫘", name: "Reactロースト", desc: "コンポーネント化したくなる香り。" },
+          { art: "✨", name: "Three.jsスペシャル", desc: "飲むと何でも3Dにしたくなります。" },
+          { art: "🍯", name: "8割完成ブレンド", desc: "今日はここまでが言えるようになります。" },
+          { art: "🌙", name: "仕様変更ブレンド", desc: "飲むたびにアイデアが増えます。" },
+          { art: "💘", name: "ズキュン・モカ", desc: "ときどき想定外の方向へ胸が撃ち抜かれます。" },
+          { art: "🥧☕", name: "SSR アップルパイセット", desc: "超レア。今日はもう少しだけ楽しくなります。" },
+        ];
+
+        const chords = [
+          [523.25, 659.25, 783.99],
+          [440, 554.37, 659.25],
+          [392, 493.88, 587.33],
+          [587.33, 739.99, 880],
+        ];
+
+        let selectedKey = "t";
+        let audioContext = null;
+        const placedCharacters = new Set();
+        const discoveredCoffee = new Set();
+
+        function pick(items) {
+          return items[Math.floor(Math.random() * items.length)];
+        }
+
+        function playChord() {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+
+          if (!AudioContext) {
+            return;
+          }
+
+          audioContext = audioContext || new AudioContext();
+          const now = audioContext.currentTime;
+          const chord = pick(chords);
+
+          chord.forEach((frequency, index) => {
+            const oscillator = audioContext.createOscillator();
+            const gain = audioContext.createGain();
+
+            oscillator.type = "square";
+            oscillator.frequency.setValueAtTime(frequency, now);
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.055, now + 0.015 + index * 0.025);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.42 + index * 0.03);
+            oscillator.connect(gain).connect(audioContext.destination);
+            oscillator.start(now + index * 0.035);
+            oscillator.stop(now + 0.5 + index * 0.03);
+          });
+        }
+
+        function playTone(frequency, start, duration, type = "square", volume = 0.035) {
+          const oscillator = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+
+          oscillator.type = type;
+          oscillator.frequency.setValueAtTime(frequency, start);
+          gain.gain.setValueAtTime(0, start);
+          gain.gain.linearRampToValueAtTime(volume, start + 0.012);
+          gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+          oscillator.connect(gain).connect(audioContext.destination);
+          oscillator.start(start);
+          oscillator.stop(start + duration + 0.03);
+        }
+
+        function playCharacterSound(sound) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+
+          if (!AudioContext) {
+            return;
+          }
+
+          audioContext = audioContext || new AudioContext();
+          const now = audioContext.currentTime;
+          const patterns = {
+            sparkle: [[880, 0, 0.12, "triangle"], [1318.51, 0.09, 0.14, "sine"], [1760, 0.18, 0.16, "sine"]],
+            chime: [[659.25, 0, 0.16, "sine"], [987.77, 0.11, 0.18, "triangle"]],
+            beep: [[523.25, 0, 0.08, "square"], [783.99, 0.1, 0.08, "square"]],
+            ping: [[1046.5, 0, 0.09, "sine"], [1567.98, 0.08, 0.1, "sine"]],
+            piko: [[1174.66, 0, 0.08, "square"], [1567.98, 0.08, 0.1, "triangle"]],
+            nyan: [[740, 0, 0.1, "triangle"], [880, 0.08, 0.12, "triangle"], [660, 0.18, 0.12, "sine"]],
+            low: [[146.83, 0, 0.22, "sawtooth"], [196, 0.13, 0.18, "triangle"]],
+            zukyun: [[659.25, 0, 0.1, "sawtooth"], [987.77, 0.08, 0.12, "triangle"], [1760, 0.18, 0.2, "sine"]],
+            coin: [[1318.51, 0, 0.07, "square"], [1760, 0.08, 0.12, "square"]],
+          };
+
+          (patterns[sound] || patterns.piko).forEach(([frequency, delay, duration, type]) => {
+            playTone(frequency, now + delay, duration, type, sound === "low" ? 0.025 : 0.038);
+          });
+        }
+
+        function setCoffee(coffee) {
+          coffeeArt.textContent = coffee.art;
+          coffeeName.textContent = coffee.name;
+          coffeeDesc.textContent = coffee.desc;
+          coffeeArt.classList.remove("isBrewing");
+          void coffeeArt.offsetWidth;
+          coffeeArt.classList.add("isBrewing");
+        }
+
+        function drawTodayCoffee() {
+          const rareHit = Math.random() < 0.08;
+          const regularMenus = coffeeMenus.filter((coffee) => !coffee.name.startsWith("SSR"));
+          return rareHit ? coffeeMenus.find((coffee) => coffee.name.startsWith("SSR")) : pick(regularMenus);
+        }
+
+        function updateCompletionBoard() {
+          const rareFound = discoveredCoffee.has("SSR アップルパイセット");
+          const titles = [
+            "目指せ！アップルパイセット 🥧✨",
+            "称号：Pixel Cafe Regular",
+            "称号：Coffee Hunter",
+            "称号：Apple Pie Seeker",
+            "称号：ズキュンを知る者",
+          ];
+
+          characterCount.textContent = `${placedCharacters.size} / ${Object.keys(characters).length} CHARACTERS`;
+          coffeeCount.textContent = `${discoveredCoffee.size} / ${coffeeMenus.length} COFFEE`;
+          rareCount.textContent = `${rareFound ? 1 : 0} / 1 SSR`;
+
+          if (rareFound) {
+            achievementOutput.textContent = "SSR発見！称号：Apple Pie Seeker 🥧☕";
+          } else if (discoveredCoffee.size >= 4) {
+            achievementOutput.textContent = titles[3];
+          } else if (placedCharacters.size >= 5) {
+            achievementOutput.textContent = titles[1];
+          } else {
+            achievementOutput.textContent = titles[0];
+          }
+        }
+
+        function renderStatus(character) {
+          selectedLabel.textContent = `SELECT：${character.name}`;
+          cafeAvatar.textContent = character.icon;
+          lineOutput.textContent = `${character.name}「${pick(character.lines)}」`;
+          coffeeOutput.textContent = character.coffee;
+        }
+
+        function selectCharacter(key) {
+          selectedKey = key;
+          document.querySelectorAll("[data-cafe-character]").forEach((button) => {
+            button.classList.toggle("isSelected", button.dataset.cafeCharacter === key);
+          });
+          renderStatus(characters[key]);
+        }
+
+        document.querySelectorAll("[data-cafe-character]").forEach((button) => {
+          button.addEventListener("click", () => selectCharacter(button.dataset.cafeCharacter));
+        });
+
+        for (let index = 0; index < 64; index += 1) {
+          const cell = document.createElement("button");
+          cell.className = "pixelCafeCell";
+          cell.type = "button";
+          cell.setAttribute("aria-label", `Cafe grid cell ${index + 1}`);
+          cell.addEventListener("click", () => {
+            const character = characters[selectedKey];
+            cell.textContent = character.icon;
+            cell.classList.remove("isPlaced");
+            void cell.offsetWidth;
+            cell.classList.add("isPlaced");
+            placedCharacters.add(selectedKey);
+            updateCompletionBoard();
+            renderStatus(character);
+            playCharacterSound(character.sound);
+            playChord();
+          });
+          grid.appendChild(cell);
+        }
+
+        resetButton?.addEventListener("click", () => {
+          grid.querySelectorAll(".pixelCafeCell").forEach((cell) => {
+            cell.textContent = "";
+            cell.classList.remove("isPlaced");
+          });
+          lineOutput.textContent = "Pixel Cafe「グリッドをリセットしました。」";
+          coffeeOutput.textContent = characters[selectedKey].coffee;
+          playCharacterSound("coin");
+        });
+
+        doneButton?.addEventListener("click", () => {
+          doneButton.disabled = true;
+          coffeeArt.textContent = "☕";
+          coffeeName.textContent = "BREWING...";
+          coffeeDesc.textContent = "・・・ □□□□□□□□";
+          coffeeOutput.textContent = "抽選中：本日のおすすめを淹れています。";
+          coffeeArt.classList.add("isBrewing");
+          playCharacterSound("coin");
+
+          window.setTimeout(() => {
+            const coffee = drawTodayCoffee();
+            discoveredCoffee.add(coffee.name);
+            setCoffee(coffee);
+            coffeeName.textContent = `✨ ${coffee.name} ✨`;
+            coffeeDesc.textContent = coffee.desc;
+            lineOutput.textContent = `Pixel Cafe「${coffee.name}をどうぞ。」`;
+            coffeeOutput.textContent = `TODAY'S COFFEE：${coffee.name}。${coffee.desc}`;
+            updateCompletionBoard();
+            playCharacterSound(coffee.name.startsWith("SSR") ? "coin" : "zukyun");
+            doneButton.disabled = false;
+          }, 2000);
+        });
+
+        renderStatus(characters[selectedKey]);
+        updateCompletionBoard();
+      })();
+
+      (() => {
+        const map = document.querySelector(".labGameMenu");
+        const playable = document.querySelector(".labPlayable");
+        const plugin = document.querySelector(".glimmervoxLab");
+        const cafe = document.querySelector(".pixelTalkCafe");
+        const legacy = document.querySelector(".labLegacyShelf");
+        const routes = document.querySelector(".labRoutes");
+        if (!map || !playable || !plugin || !cafe || !legacy || !routes) return;
+        map.after(playable);
+        playable.after(plugin);
+        plugin.after(cafe);
+        routes.before(legacy);
+      })();
+    </script>
+  </body>
+</html>

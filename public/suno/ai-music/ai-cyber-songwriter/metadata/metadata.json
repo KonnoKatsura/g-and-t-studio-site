@@ -1,0 +1,11 @@
+{
+  "source_id": "ai-music/ai-cyber-songwriter",
+  "title": "AI Cyber Songwriter",
+  "world": "AI Music",
+  "tags": [],
+  "public_flags": {
+    "listed": true,
+    "listeningRoom": true,
+    "publicAudio": true
+  }
+}

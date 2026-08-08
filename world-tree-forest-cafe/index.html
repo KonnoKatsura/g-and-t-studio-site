@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Tree Map | World Tree Forest</title>
+    <link rel="icon" type="image/svg+xml" href="/g-and-t-studio-site/assets/favicon-DZgFx6ov.svg" />
+    <style>
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(7, 19, 38, 0.94) 0%, rgba(7, 19, 38, 0.7) 38%, rgba(7, 19, 38, 0.18) 72%),
+          linear-gradient(180deg, rgba(7, 19, 38, 0.28), rgba(7, 19, 38, 0.82)),
+          url("/g-and-t-studio-site/assets/world-tree-forest-hero-BS_ev_od.png") center / cover no-repeat;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          background:
+            linear-gradient(180deg, rgba(7, 19, 38, 0.72), rgba(7, 19, 38, 0.52) 42%, rgba(7, 19, 38, 0.9)),
+            url("/g-and-t-studio-site/assets/world-tree-forest-hero-BS_ev_od.png") center top / cover no-repeat;
+        }
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="/g-and-t-studio-site/assets/styles-DaSnglU9.css">
+  </head>
+  <body>
+    <main>
+      <button class="bgmButton" type="button" aria-label="BGMを流す" title="BGMを流す">
+        <span class="bgmIcon">♪</span>
+        <span>BGM</span>
+      </button>
+      <header class="hero" id="home">
+        <div class="sparkField" aria-hidden="true">
+          <span style="--spark-left: 8%; --spark-top: 16%; --spark-delay: 0s; --spark-size: 4px"></span>
+          <span style="--spark-left: 21%; --spark-top: 58%; --spark-delay: .4s; --spark-size: 6px"></span>
+          <span style="--spark-left: 37%; --spark-top: 24%; --spark-delay: .8s; --spark-size: 3px"></span>
+          <span style="--spark-left: 56%; --spark-top: 72%; --spark-delay: 1.2s; --spark-size: 5px"></span>
+          <span style="--spark-left: 74%; --spark-top: 34%; --spark-delay: 1.6s; --spark-size: 4px"></span>
+          <span style="--spark-left: 88%; --spark-top: 62%; --spark-delay: 2s; --spark-size: 6px"></span>
+        </div>
+        <div class="siteMenu forestSiteMenu" aria-label="ページメニュー">
+          <a class="siteMenuBrand" href="../preview.html#top">G&amp;T</a>
+          <input class="siteMenuSwitch" id="world-tree-menu" type="checkbox" />
+          <label class="siteMenuButton" for="world-tree-menu" aria-label="メニューを開く"><span aria-hidden="true">☰</span></label>
+          <nav class="siteMenuPanel" aria-label="ページナビゲーション">
+            <a class="siteMenuHome" href="../preview.html#top">HOME</a>
+            <span class="siteMenuHeading">WORLDS</span>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="#home">🌳 World Tree</a>
+            <a href="../shiro.html">🦊 Shiro Atelier</a>
+            <a href="../music.html">🎵 Listening Room</a>
+            <a href="../ai-lab.html">🧪 AI Lab</a>
+            <a href="../notes.html">📝 Notes</a>
+            <a href="../gallery.html">🧭 Works</a>
+            <span class="siteMenuRule" aria-hidden="true"></span>
+            <a href="#links">SNS</a>
+            <a href="../hearing.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="heroGrid">
+          <section class="heroCopy">
+            <p class="eyebrow">welcome map</p>
+            <h1><span>World Tree</span><span class="goldText">Map</span></h1>
+            <p>世界樹の森へようこそ。ここは、森の物語、星降る日常、レストラン、おみやげ棚へ向かうための小さな案内地図です。</p>
+            <div class="heroActions" aria-label="主要リンク">
+              <a href="#notice">🌿 今日の森だより</a>
+              <a href="#forest-doors">森の扉を見る</a>
+            </div>
+          </section>
+          <div class="sigil" aria-label="光と影の森の紋章">
+            <div class="tree"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section notice heroNotice" id="notice">
+        <div>
+          <p class="eyebrow">forest letter</p>
+          <h2>🌿 今日の森だより <span class="noticeNumber" data-forest-letter-number>No.001</span></h2>
+          <p class="noticeLead">世界樹の森から届く、小さな一日分の便り。少しずつ番号が増えていきます。</p>
+        </div>
+        <figure class="noticeImage">
+          <img data-forest-letter-image src="/g-and-t-studio-site/assets/forest-letter-001-CmL705OK.png" alt="世界樹の森から届いた今日の森だより" />
+        </figure>
+        <div class="noticeList forestLetterText" data-forest-letter-copy>
+          <p>世界樹の花びらが一枚、カフェの窓辺に届きました。</p>
+        </div>
+        <div class="forestLetterArchive" data-forest-letter-archive aria-label="今日の森だよりアーカイブ"></div>
+      </section>
+
+      <section class="section interactiveForestMap" id="interactive-map" aria-labelledby="interactive-map-title">
+        <div class="sectionIntro mapBoardIntro">
+          <p class="eyebrow">touch the map</p>
+          <h2 id="interactive-map-title">World Tree Forest Cafe MAP</h2>
+          <p>気になる灯りを選ぶと、その場所の扉へ進めます。森の案内板は、少しずつ育っていきます。</p>
+        </div>
+        <div class="mapBoardFrame">
+          <div class="mapBoard" role="img" aria-label="世界樹の森の案内地図">
+            <div class="mapBoardGlow" aria-hidden="true"></div>
+            <span class="mapRoute mapRouteCafe" aria-hidden="true"></span>
+            <span class="mapRoute mapRouteHoshifuru" aria-hidden="true"></span>
+            <span class="mapRoute mapRouteJukan" aria-hidden="true"></span>
+            <span class="mapRoute mapRouteSouvenir" aria-hidden="true"></span>
+            <a class="mapSpot mapSpotCafe" href="#door-cafe" data-map-target="door-cafe" style="--spot-x: 50%; --spot-y: 50%;">
+              <span class="mapPin">☕</span>
+              <span><strong>Forest Cafe</strong><small>物語とキャラクター紹介</small></span>
+            </a>
+            <a class="mapSpot mapSpotHoshifuru" href="#door-hoshifuru" data-map-target="door-hoshifuru" style="--spot-x: 24%; --spot-y: 58%;">
+              <span class="mapPin">⭐</span>
+              <span><strong>Hoshifuru Cafe</strong><small>人間界の日常と写真棚</small></span>
+            </a>
+            <a class="mapSpot mapSpotJukan" href="#door-jukan" data-map-target="door-jukan" style="--spot-x: 72%; --spot-y: 55%;">
+              <span class="mapPin">🍽</span>
+              <span><strong>樹冠の灯</strong><small>レストランと季節の席</small></span>
+            </a>
+            <a class="mapSpot mapSpotGlowdust" href="#door-glowdust" data-map-target="door-glowdust" style="--spot-x: 72%; --spot-y: 72%;">
+              <span class="mapPin">🎤</span>
+              <span><strong>GLOWDUST</strong><small>音楽ライブとダンスステージ</small></span>
+            </a>
+            <a class="mapSpot mapSpotSouvenir" href="#door-souvenir" data-map-target="door-souvenir" style="--spot-x: 38%; --spot-y: 76%;">
+              <span class="mapPin">🛍</span>
+              <span><strong>Souvenir Shop</strong><small>光のかけらとGoods棚</small></span>
+            </a>
+            <a class="mapSpot mapSpotNotice" href="#notice" data-map-target="notice" style="--spot-x: 82%; --spot-y: 32%;">
+              <span class="mapPin">📜</span>
+              <span><strong>Today</strong><small>今日の森だよりへ</small></span>
+            </a>
+            <img class="mapPeek mapPeekGoo" src="/g-and-t-studio-site/assets/map-peek-glimmerpou-face-DlQ84qqZ.png" alt="" aria-hidden="true" />
+            <img class="mapPeek mapPeekSmallGoo" src="/g-and-t-studio-site/assets/map-peek-glimmerpou-small-BC8LwHEJ.png" alt="" aria-hidden="true" />
+            <span class="mapPeek mapPeekMogu" aria-hidden="true">●●</span>
+            <span class="mapPeek mapPeekLeaf" aria-hidden="true">🌿</span>
+          </div>
+          <p class="mapBoardMessage" data-map-message>灯りを選ぶと、下の扉がふわっと光ります。</p>
+        </div>
+      </section>
+
+      <section class="section forestDoors" id="forest-doors">
+        <div class="sectionIntro">
+          <p class="eyebrow">door guide</p>
+          <h2>🚪 Forest Doors</h2>
+          <p>地図で見つけた灯りから、世界樹の森のそれぞれの部屋へ向かえます。</p>
+        </div>
+        <div class="forestDoorGrid mapDoorGrid">
+          <a class="forestDoorCard storyDoor" id="door-cafe" href="./story.html">
+            <img src="/g-and-t-studio-site/assets/glimmerpou-latte-Ba-LdPsv.jpeg" alt="カフェでラテを飲むGlimmerpou" />
+            <span class="doorIcon">☕</span>
+            <div>
+              <small>World Tree Forest Cafe</small>
+              <h3>World Tree Forest Cafe</h3>
+              <p>世界樹の森、glimmerpou誕生、ShadowMoguとの出会い、本店メニュー、キャラクター紹介、Field Notes。</p>
+            </div>
+          </a>
+          <a class="forestDoorCard hoshifuruDoor" id="door-hoshifuru" href="./hoshifuru-cafe.html">
+            <img src="/g-and-t-studio-site/assets/daily-life-cafe-D1B699my.jpeg" alt="人間界の日常カフェの仮イメージ" />
+            <span class="doorIcon">⭐</span>
+            <div>
+              <small>Hoshifuru Cafe</small>
+              <h3>Hoshifuru Cafe</h3>
+              <p>人間界にある星降るカフェ時間。今日の席、カフェ写真、ぐーちゃんの日常を眺める姉妹店。</p>
+            </div>
+          </a>
+          <a class="forestDoorCard dailyLifeDoor" id="door-daily-life" href="https://www.youtube.com/channel/UCjBcU333OczMveqR_0qvKAw">
+            <img src="/g-and-t-studio-site/assets/glimmerpou_icon-7oRv8c8U.png" alt="Glimmerpou's Daily Lifeのアイコン" />
+            <span class="doorIcon">📷</span>
+            <div>
+              <small>Human World Journal</small>
+              <h3>Glimmerpou’s Daily Life</h3>
+              <p>人間界へ修行に出たglimmerpouと、顔出しなしの飼い主T、追いかけてきたShadowMoguたちの日常。</p>
+            </div>
+          </a>
+          <a class="forestDoorCard restaurantDoor" id="door-jukan" href="./jukan-no-tomoshibi.html">
+            <img src="/g-and-t-studio-site/assets/jukan-restaurant-DRo44-ml.png" alt="樹冠の灯レストランのイメージ" />
+            <span class="doorIcon">🍽</span>
+            <div>
+              <small>Pre Opening</small>
+              <h3>樹冠の灯</h3>
+              <p>Jukan no Tomoshibi。ShadowMoguたちが営む、世界樹の上階に灯るレストラン。</p>
+            </div>
+          </a>
+          <a class="forestDoorCard glowdustDoor" id="door-glowdust" href="./jukan-no-tomoshibi.html#glowdust">
+            <img src="/g-and-t-studio-site/assets/glowdust-002-CY70iZrb.png" alt="GLOWDUSTの音楽ライブとダンスパフォーマンス" />
+            <span class="doorIcon">🎤</span>
+            <div>
+              <small>Seasonal Stage</small>
+              <h3>GLOWDUST</h3>
+              <p>樹冠の灯で季節ごとにひらく、ぐーちゃんとShadowMoguたちの音楽ライブとダンスステージ。</p>
+            </div>
+          </a>
+          <a class="forestDoorCard souvenirDoor" id="door-souvenir" href="./souvenir-shop.html">
+            <img src="/g-and-t-studio-site/assets/souvenir-shop-placeholder-oeHLyy3i.jpeg" alt="森のおみやげ屋さんの仮イメージ" />
+            <span class="doorIcon">🛍</span>
+            <div>
+              <small>Goods Archive</small>
+              <h3>Souvenir Shop</h3>
+              <p>Goods風の画像と、LumenPounce_Atelierの小さなアクセサリー棚。</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section access mapAccess" id="access">
+        <figure class="accessImage">
+          <img src="/g-and-t-studio-site/assets/world-tree-door-guide-DhBe8eGq.jpeg" alt="世界樹の森の扉と迎えに来たGlimmerpou" />
+        </figure>
+        <div class="accessCopy">
+          <p class="eyebrow">way to the cafe</p>
+          <h2>カフェへの道案内</h2>
+          <p>人間界からお越しの際は、世界樹の森の扉の先でGlimmerpouがお迎えに行きます。</p>
+          <p>迷ったときは、金色のきらめきをたどってください。仮の合言葉は「ポットパイは半分こ」。</p>
+          <div class="forestPasswordBox" aria-label="森の扉の合言葉">
+            <p class="forestPasswordTitle">Forest Door Password</p>
+            <div class="forestPasswordChoices" role="group" aria-label="合言葉を選ぶ">
+              <button class="isSelected" type="button" data-password-choice="potpie">🍲 ポットパイは半分こ</button>
+              <button type="button" data-password-choice="mogu-feast">🍞 ShadowMoguたちの宴</button>
+              <button type="button" data-password-choice="tree-yawn">🌳 世界樹のあくび</button>
+              <button type="button" data-password-choice="good-night">🌙 また明日ね</button>
+            </div>
+            <button class="forestKnockButton" type="button" data-forest-knock>扉をノックする</button>
+            <p class="forestDoorReply" data-forest-reply aria-live="polite">合言葉を選んで、扉をそっとノックしてみてください。</p>
+          </div>
+          <a href="https://note.com/kon_0320">noteで森の近況を見る</a>
+        </div>
+      </section>
+
+      <section class="section social" id="links">
+        <div class="socialWrap">
+          <div class="socialCopy">
+            <div class="sectionIntro">
+              <p class="eyebrow">social links</p>
+              <h2>SNSと連絡先</h2>
+              <p>Glimmerpouの記録、カフェからのお知らせ、限定公開の案内はこちらから。</p>
+            </div>
+            <div class="socialIconBar">
+              <a class="neonBlue" href="https://x.com/glimmerpou0320" aria-label="X: @glimmerpou0320" title="X: @glimmerpou0320">
+                <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path d="M4.2 4h4.1l4.3 5.8L17.6 4H20l-6.3 7.3L20.8 20h-4.1l-4.8-6.5L6.3 20H4l6.8-7.9L4.2 4Zm3.1 1.8 10.2 12.4h1.1L8.4 5.8H7.3Z" fill="currentColor"/></svg>
+              </a>
+              <a class="neonCyan" href="https://www.facebook.com/glimmerpou0320" aria-label="Facebook: glimmerpou0320" title="Facebook: glimmerpou0320">
+                <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path d="M13.5 21v-7.8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4v3.1h2.7V21h3.4Z" fill="currentColor"/></svg>
+              </a>
+              <a class="neonPink" href="https://www.instagram.com/glimmerpou0320?igsh=ZmdraHk1NXNtcXUz&utm_source=qr" aria-label="Instagram: @glimmerpou0320" title="Instagram: @glimmerpou0320">
+                <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg>
+              </a>
+              <a class="neonRose" href="https://www.youtube.com/channel/UCjBcU333OczMveqR_0qvKAw" aria-label="YouTube: Glimmerpou’s Daily Life" title="YouTube: Glimmerpou’s Daily Life">
+                <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path d="M21 12s0-3.2-.4-4.6c-.2-.8-.9-1.4-1.7-1.6C17.4 5.4 12 5.4 12 5.4s-5.4 0-6.9.4c-.8.2-1.5.8-1.7 1.6C3 8.8 3 12 3 12s0 3.2.4 4.6c.2.8.9 1.4 1.7 1.6 1.5.4 6.9.4 6.9.4s5.4 0 6.9-.4c.8-.2 1.5-.8 1.7-1.6.4-1.4.4-4.6.4-4.6Zm-10.8 3V9l5.2 3-5.2 3Z" fill="currentColor"/></svg>
+              </a>
+              <a class="neonYellow" href="https://note.com/kon_0320" aria-label="note: kon_0320" title="note: kon_0320">
+                <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path d="M5 4.5h14v15H5v-15Zm3.2 10.9h2.2V9.8c.5-.4 1-.6 1.6-.6 1 0 1.5.6 1.5 1.8v4.4h2.2v-4.8c0-2.2-1.2-3.3-3.1-3.3-1 0-1.8.3-2.5 1V7.6H8.2v7.8Z" fill="currentColor"/></svg>
+              </a>
+              <a class="neonGreen" href="./story.html#field-notes" aria-label="Field Notes: Shadow Mogu Field Notes" title="Field Notes: Shadow Mogu Field Notes">
+                <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Zm3 .5v10.8c.4-.2.9-.3 1.5-.3H18V5H8.5C7.7 5 7 5.4 7 6Zm2.2 3h6.6v1.7H9.2V9Zm0 3h5.2v1.7H9.2V12Z" fill="currentColor"/></svg>
+              </a>
+            </div>
+            <div class="tagCloud" aria-label="Instagram hashtags">
+              <span>#glimmerpour</span>
+              <span>#cutereels</span>
+              <span>#wholesome</span>
+            </div>
+          </div>
+          <figure class="thankYouCard">
+            <img src="/g-and-t-studio-site/assets/thank-you-shadowmogu-Bjyhevmv.jpeg" alt="Thank youの旗を持つShadowMoguたち" />
+          </figure>
+        </div>
+      </section>
+
+    </main>
+    <script>
+      (() => {
+        const spots = [...document.querySelectorAll("[data-map-target]")];
+        const cards = [...document.querySelectorAll(".forestDoorCard")];
+        const messagesOut = [...document.querySelectorAll("[data-map-message]")];
+        if (!spots.length) return;
+
+        const messages = {
+          "door-cafe": "☕ Forest Cafeの扉が光りました。物語とキャラクター紹介へ進めます。",
+          "door-hoshifuru": "⭐ Hoshifuru Cafeの席が見つかりました。人間界のカフェ時間へどうぞ。",
+          "door-jukan": "🍽 樹冠の灯のランタンが灯りました。レストランの入口へ案内します。",
+          "door-glowdust": "🎤 GLOWDUSTのステージがきらめきました。季節のライブ案内へ。",
+          "door-souvenir": "🛍 Souvenir Shopの棚が開きました。光のかけらとGoods棚へ。",
+          notice: "📜 今日の森だよりが開きました。森から届いた小さなお便りです。"
+        };
+
+        const selectTarget = (targetId) => {
+          spots.forEach((spot) => spot.classList.toggle("isActive", spot.dataset.mapTarget === targetId));
+          cards.forEach((card) => card.classList.toggle("isMapSelected", card.id === targetId));
+
+          messagesOut.forEach((message) => {
+            message.textContent = messages[targetId] || "灯りを選ぶと、下の扉がふわっと光ります。";
+          });
+        };
+
+        spots.forEach((spot) => {
+          spot.addEventListener("click", () => {
+            const targetId = spot.dataset.mapTarget;
+            selectTarget(targetId);
+
+            window.setTimeout(() => {
+              const target = document.getElementById(targetId);
+              if (target) {
+                target.classList.remove("isMapSelected");
+              }
+            }, 1800);
+          });
+        });
+      })();
+    </script>
+    <script src="./public/images/11_forest-letterbox/forest-letterbox-manifest.js"></script>
+    <script>
+      (() => {
+        const image = document.querySelector("[data-forest-letter-image]");
+        const number = document.querySelector("[data-forest-letter-number]");
+        const archive = document.querySelector("[data-forest-letter-archive]");
+        const copy = document.querySelector("[data-forest-letter-copy]");
+        const letters = window.WTFC_FOREST_LETTER_IMAGES || [];
+        if (!image || !letters.length) return;
+
+        const today = new Date();
+        const start = Date.UTC(2026, 6, 12);
+        const current = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+        const dayKey = Math.max(0, Math.floor((current - start) / 86400000));
+        let activeIndex = dayKey % letters.length;
+
+        const padNumber = (value) => String(value).padStart(3, "0");
+        const showLetter = (index) => {
+          const letter = letters[index] || letters[0];
+          activeIndex = index;
+          image.src = letter.src;
+          image.alt = letter.alt || "世界樹の森から届いた今日の森だより";
+
+          if (number) {
+            number.textContent = `No.${padNumber(letter.number || index + 1)}`;
+          }
+
+          if (copy) {
+            copy.innerHTML = "";
+            const paragraph = document.createElement("p");
+            paragraph.textContent = letter.text || "森の小さな便りが、今日も一通届きました。";
+            copy.appendChild(paragraph);
+          }
+
+          if (archive) {
+            archive.querySelectorAll("button").forEach((button) => {
+              button.classList.toggle("isActive", Number(button.dataset.letterIndex) === activeIndex);
+            });
+          }
+        };
+
+        if (archive) {
+          archive.innerHTML = "";
+          letters.forEach((letter, index) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.dataset.letterIndex = String(index);
+            button.textContent = `No.${padNumber(letter.number || index + 1)}`;
+            button.addEventListener("click", () => showLetter(index));
+            archive.appendChild(button);
+          });
+        }
+
+        showLetter(activeIndex);
+      })();
+    </script>
+    <script>
+      (() => {
+        const choices = [...document.querySelectorAll("[data-password-choice]")];
+        const knock = document.querySelector("[data-forest-knock]");
+        const reply = document.querySelector("[data-forest-reply]");
+        if (!choices.length || !knock || !reply) return;
+
+        const messages = {
+          potpie: [
+            "🦊「やぁ！よく来たね！世界樹も喜んでるよ🌳✨」",
+            "●●● ShadowMoguたち「キーキー♪（お待ちしておりました。足元のきらめきをたどってください）」",
+            "☕ カフェの奥から、ポットパイの香りがふわっと届きました。"
+          ],
+          "mogu-feast": [
+            "●●● ShadowMoguたち「キーキー♪（宴の席を増やしておきます）」",
+            "🍞 焼きたてパンのかけらが、扉の下からころころ転がってきました。",
+            "🦊「ShadowMoguたち、もう集まってるみたい！」"
+          ],
+          "tree-yawn": [
+            "🌳 世界樹がふわりとあくびをして、葉っぱの光がぱらぱら落ちました。",
+            "🦊「今の音、世界樹が返事したのかも」",
+            "●●● ShadowMoguたち「キー……（静かに、でも歓迎中）」"
+          ],
+          "good-night": [
+            "🌙 夜の森のランタンが一つだけ明るくなりました。また明日も来られます。",
+            "🦊「おやすみの合言葉だね。帰り道も、ぼくが少しだけ照らすよ」",
+            "●●● ShadowMoguたち「キーキー♪（毛布と星明かりを用意しました）」"
+          ]
+        };
+
+        let selected = "potpie";
+        let doorAudio = null;
+
+        const playDoorSound = (kind) => {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContext) return;
+          doorAudio = doorAudio || new AudioContext();
+          const now = doorAudio.currentTime;
+          const gain = doorAudio.createGain();
+          gain.connect(doorAudio.destination);
+
+          const tone = (frequency, start, duration, type = "sine", volume = 0.055) => {
+            const oscillator = doorAudio.createOscillator();
+            const noteGain = doorAudio.createGain();
+            oscillator.type = type;
+            oscillator.frequency.setValueAtTime(frequency, start);
+            noteGain.gain.setValueAtTime(0.0001, start);
+            noteGain.gain.linearRampToValueAtTime(volume, start + 0.012);
+            noteGain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+            oscillator.connect(noteGain).connect(gain);
+            oscillator.start(start);
+            oscillator.stop(start + duration + 0.03);
+          };
+
+          const dryKnock = (start) => {
+            const sampleRate = doorAudio.sampleRate;
+            const buffer = doorAudio.createBuffer(1, Math.ceil(sampleRate * 0.065), sampleRate);
+            const channel = buffer.getChannelData(0);
+            for (let index = 0; index < channel.length; index += 1) {
+              const decay = Math.pow(1 - index / channel.length, 4);
+              channel[index] = (Math.random() * 2 - 1) * decay;
+            }
+            const source = doorAudio.createBufferSource();
+            const filter = doorAudio.createBiquadFilter();
+            const knockGain = doorAudio.createGain();
+            filter.type = "bandpass";
+            filter.frequency.setValueAtTime(1650, start);
+            filter.Q.setValueAtTime(2.8, start);
+            knockGain.gain.setValueAtTime(0.12, start);
+            knockGain.gain.exponentialRampToValueAtTime(0.001, start + 0.065);
+            source.buffer = buffer;
+            source.connect(filter).connect(knockGain).connect(gain);
+            source.start(start);
+            tone(690, start, 0.075, "triangle", 0.075);
+            tone(1040, start + 0.004, 0.042, "sine", 0.032);
+          };
+
+          if (kind === "select") {
+            tone(740, now, 0.1, "square", 0.025);
+          } else if (kind === "knock") {
+            dryKnock(now);
+            dryKnock(now + 0.16);
+          } else {
+            [392, 523.25, 659.25, 783.99].forEach((frequency, index) => {
+              tone(frequency, now + index * 0.075, 0.34, "sine", 0.045);
+            });
+          }
+        };
+
+        choices.forEach((button) => {
+          button.addEventListener("click", () => {
+            selected = button.dataset.passwordChoice;
+            choices.forEach((item) => item.classList.toggle("isSelected", item === button));
+            playDoorSound("select");
+          });
+        });
+
+        knock.addEventListener("click", () => {
+          playDoorSound("knock");
+          const pool = messages[selected] || messages.potpie;
+          reply.textContent = pool[Math.floor(Math.random() * pool.length)];
+          reply.classList.remove("isKnocking");
+          void reply.offsetWidth;
+          reply.classList.add("isKnocking");
+          window.setTimeout(() => playDoorSound("open"), 420);
+        });
+      })();
+    </script>
+    <script src="./public/cursor-trails.js"></script>
+    <script>
+      (() => {
+        const button = document.querySelector(".bgmButton");
+        const audio = new Audio("./public/audio/glimmerpou_BGM.mp3");
+        audio.loop = true;
+        audio.volume = 0.62;
+
+        function updateButton(isPlaying) {
+          button.classList.toggle("isPlaying", isPlaying);
+          button.setAttribute("aria-label", isPlaying ? "BGMを止める" : "BGMを流す");
+          button.setAttribute("title", isPlaying ? "BGMを止める" : "BGMを流す");
+        }
+
+        button.addEventListener("click", async () => {
+          if (!audio.paused) {
+            audio.pause();
+            updateButton(false);
+            return;
+          }
+
+          try {
+            await audio.play();
+            updateButton(true);
+          } catch (error) {
+            updateButton(false);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
