@@ -419,13 +419,8 @@
   }
 
   const studioPlans = {
-    8: [
-      ["statusDeploy", "👩 T", "G&T Studioプレオープン確認"],
-      ["statusWorking", "💻 こーちゃん", "公開音源・映像・開発室の修正"],
-      ["statusWorking", "🤖 G", "g-and-t-knowledge初期運用"],
-      ["statusDone", "🌐 G&T Studio", "2026.08.08 プレオープン"],
-    ],
-    14: [
+    7: {
+      14: [
       ["statusDone", "👩 T", "WTFC Storyと素材整理"],
       ["statusDone", "🤖 G", "Image Review整理"],
       ["statusWorking", "💻 こーちゃん", "Deploy予定と導線確認"],
@@ -433,36 +428,48 @@
       ["statusDone", "🧘 くーちゃん", "世界観レビュー"],
       ["statusWorking", "🔍 P", "情報収集"],
     ],
-    15: [
+      15: [
       ["statusDone", "👩 T", "空からお便り投函"],
       ["statusWorking", "💻 こーちゃん", "投函口とPath Tree整備"],
       ["statusHold", "🤖 G", "管理メニュー構想"],
       ["statusWorking", "🍰 おやつ会議", "アップルパイ候補"],
     ],
-    16: [
+      16: [
       ["statusWorking", "👩 T", "今日の備忘録へガンガン投函"],
       ["statusWorking", "💻 こーちゃん", "G&T Studio Board共有アプリ化"],
       ["statusHold", "🤖 G", "カプセルマシン構想"],
       ["statusDeploy", "🌳 WTFC", "プレオープン準備"],
       ["statusWorking", "☕ 開発室", "カプセル抽出テスト"],
     ],
-    17: [
+      17: [
       ["statusWorking", "👩 T", "シロちゃん素材とSuno整理メモを確認"],
       ["statusWorking", "💻 こーちゃん", "開発室の扉・更新表・テーマ色を整備"],
       ["statusHold", "🤖 G", "次の世界観会議を準備"],
       ["statusWorking", "🎵 Suno", "資産検索と取込フローを棚卸し"],
     ],
-    22: [
+      22: [
       ["statusWorking", "👩 T", "G&Tのうた制作と開発室スケジュール相談"],
       ["statusWorking", "💻 こーちゃん", "社歌Now PlayingとTeam Calendar更新"],
       ["statusWorking", "🤖 G", "朝礼と運用方針を相談中"],
       ["statusWorking", "🧰 Material Library", "B1素材見本室をショールーム化"],
       ["statusHold", "📅 Schedule", "朝礼テンプレート確定待ち"],
-    ],
+      ],
+    },
+    8: {
+      8: [
+        ["statusDeploy", "👩 T", "G&T Studioプレオープン確認"],
+        ["statusWorking", "💻 こーちゃん", "公開音源・映像・開発室の修正"],
+        ["statusWorking", "🤖 G", "g-and-t-knowledge初期運用"],
+        ["statusDone", "🌐 G&T Studio", "2026.08.08 プレオープン"],
+      ],
+    },
   };
 
   const detail = document.querySelector("[data-studio-detail]");
-  const calendarButtons = document.querySelectorAll("[data-studio-day]");
+  const calendarGrid = document.querySelector(".studioCalendarGrid");
+  const calendarMonthLabel = document.querySelector("[data-calendar-month-label]");
+  const calendarMonthButtons = document.querySelectorAll("[data-calendar-month]");
+  let activeCalendarMonth = 8;
   const getMemberIcon = (member) => String(member || "").trim().split(/\s+/)[0] || "•";
   const renderMemberDetail = (plans, index = 0) => {
     if (!detail) {
@@ -486,9 +493,9 @@
       return;
     }
 
-    const plans = studioPlans[day] || [["statusHold", "📌 G&T", "この日はまだ余白。あとから予定を貼れます。"]];
+    const plans = studioPlans[activeCalendarMonth]?.[day] || [["statusHold", "📌 G&T", "この日はまだ余白。あとから予定を貼れます。"]];
     detail.innerHTML = [
-      `<span>8月${day}日${day === "8" ? " ✦ PRE-OPEN" : ""}</span>`,
+      `<span>${activeCalendarMonth}月${day}日${activeCalendarMonth === 8 && day === "8" ? " ✦ PRE-OPEN" : ""}</span>`,
       `<div class="studioDayMembers" data-studio-day-members>${plans.map(([statusClass, member], index) => `<button type="button" ${index === 0 ? 'class="is-active"' : ""} data-plan-index="${index}"><i class="${statusClass}"></i><span>${getMemberIcon(member)}</span></button>`).join("")}</div>`,
       '<p class="studioCalendarMemberDetail" data-studio-member-detail></p>',
     ].join("");
@@ -499,17 +506,49 @@
     renderMemberDetail(plans, 0);
   };
 
-  calendarButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const day = button.dataset.studioDay;
-      if (!day) {
-        return;
-      }
+  const renderCalendar = (month) => {
+    if (!calendarGrid) return;
 
-      calendarButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-      renderPlan(day);
+    activeCalendarMonth = month;
+    const year = 2026;
+    const daysInMonth = new Date(year, month, 0).getDate();
+    const mondayOffset = (new Date(year, month - 1, 1).getDay() + 6) % 7;
+    const defaultDay = month === 8 ? 8 : 22;
+    const cells = [];
+
+    for (let index = 0; index < mondayOffset; index += 1) {
+      cells.push('<button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>');
+    }
+
+    for (let day = 1; day <= daysInMonth; day += 1) {
+      const plans = studioPlans[month]?.[day];
+      const icons = plans ? plans.slice(0, 3).map(([, member]) => `<span>${getMemberIcon(member)}</span>`).join("") : "";
+      cells.push(`<button type="button"${day === defaultDay ? ' class="is-active"' : ""} data-studio-day="${day}"${plans ? " data-has-plan" : ""}><strong>${day}</strong>${icons}</button>`);
+    }
+
+    while (cells.length % 7 !== 0) {
+      cells.push('<button type="button" class="is-empty" tabindex="-1" aria-hidden="true"></button>');
+    }
+
+    calendarGrid.innerHTML = cells.join("");
+    if (calendarMonthLabel) calendarMonthLabel.textContent = `${month === 7 ? "July" : "August"} 2026`;
+    calendarMonthButtons.forEach((button) => {
+      button.disabled = Number(button.dataset.calendarMonth) === month;
     });
+
+    calendarGrid.querySelectorAll("[data-studio-day]").forEach((button) => {
+      button.addEventListener("click", () => {
+        calendarGrid.querySelectorAll("[data-studio-day]").forEach((item) => item.classList.toggle("is-active", item === button));
+        renderPlan(button.dataset.studioDay);
+      });
+    });
+    renderPlan(String(defaultDay));
+  };
+
+  calendarMonthButtons.forEach((button) => {
+    button.addEventListener("click", () => renderCalendar(Number(button.dataset.calendarMonth)));
   });
+  renderCalendar(8);
 
   document.querySelectorAll("[data-studio-tab]").forEach((button) => {
     button.addEventListener("click", () => {
