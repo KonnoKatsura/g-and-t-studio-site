@@ -419,6 +419,12 @@
   }
 
   const studioPlans = {
+    8: [
+      ["statusDeploy", "👩 T", "G&T Studioプレオープン確認"],
+      ["statusWorking", "💻 こーちゃん", "公開音源・映像・開発室の修正"],
+      ["statusWorking", "🤖 G", "g-and-t-knowledge初期運用"],
+      ["statusDone", "🌐 G&T Studio", "2026.08.08 プレオープン"],
+    ],
     14: [
       ["statusDone", "👩 T", "WTFC Storyと素材整理"],
       ["statusDone", "🤖 G", "Image Review整理"],
@@ -482,7 +488,7 @@
 
     const plans = studioPlans[day] || [["statusHold", "📌 G&T", "この日はまだ余白。あとから予定を貼れます。"]];
     detail.innerHTML = [
-      `<span>7月${day}日</span>`,
+      `<span>8月${day}日${day === "8" ? " ✦ PRE-OPEN" : ""}</span>`,
       `<div class="studioDayMembers" data-studio-day-members>${plans.map(([statusClass, member], index) => `<button type="button" ${index === 0 ? 'class="is-active"' : ""} data-plan-index="${index}"><i class="${statusClass}"></i><span>${getMemberIcon(member)}</span></button>`).join("")}</div>`,
       '<p class="studioCalendarMemberDetail" data-studio-member-detail></p>',
     ].join("");
