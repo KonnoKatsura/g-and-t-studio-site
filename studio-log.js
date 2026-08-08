@@ -532,6 +532,10 @@
   };
   const createLoungePreview = (source) => {
     const preview = source.cloneNode(true);
+    const teamMembers = [...preview.querySelectorAll("[data-team-card]")].map(
+      (card) => card.dataset.teamMember,
+    );
+    const hasTeamProfile = Boolean(preview.querySelector("[data-team-profile]"));
     preview.removeAttribute("id");
     preview.querySelectorAll("[id]").forEach((node) => node.removeAttribute("id"));
     preview.querySelectorAll("audio, form").forEach((node) => node.remove());
@@ -540,6 +544,15 @@
         if (attribute.name.startsWith("data-")) node.removeAttribute(attribute.name);
       });
     });
+    preview.querySelectorAll(".studioTeamCard").forEach((card, index) => {
+      if (!teamMembers[index]) return;
+      card.dataset.loungeTeamMember = teamMembers[index];
+      card.setAttribute("role", "button");
+      card.tabIndex = 0;
+    });
+    if (hasTeamProfile) {
+      preview.querySelector(".studioTeamProfile")?.setAttribute("data-lounge-team-profile", "");
+    }
     return preview;
   };
   Object.entries(loungeSources).forEach(([name, source]) => {
@@ -815,14 +828,14 @@
       playTone(frequency, now + index * 0.07, 0.09, type, volume);
     });
   };
-  const openTeamTalk = (member, showTalk = false) => {
+  const openTeamTalk = (member, showTalk = false, profile = teamProfile) => {
     const line = teamInfo[member];
-    if (!line || !teamProfile) {
+    if (!line || !profile) {
       return;
     }
 
     const visitor = visitorNameInput?.value.trim() || "Guest";
-    teamProfile.innerHTML = [
+    profile.innerHTML = [
       `<span>${line.label}</span>`,
       `<h3>${line.name}</h3>`,
       `<strong>${line.role}</strong>`,
@@ -831,9 +844,10 @@
       '<div class="studioTeamActions"><a href="#team-calendar">予定を見る</a><a href="#studio-team-chat">チャットを見る</a><button type="button" data-team-speak>話しかける</button></div>',
       showTalk ? `<article class="studioTeamTalk is-inline"><span>${line.label}</span><p>${line.talk.replaceAll("{visitor}", visitor)}</p></article>` : "",
     ].join("");
-    teamProfile.querySelector("[data-team-speak]")?.addEventListener("click", () => openTeamTalk(member, true));
-    document.querySelectorAll("[data-team-card]").forEach((card) => {
-      card.classList.toggle("is-speaking", card.dataset.teamMember === member);
+    profile.querySelector("[data-team-speak]")?.addEventListener("click", () => openTeamTalk(member, true, profile));
+    document.querySelectorAll("[data-team-card], [data-lounge-team-member]").forEach((card) => {
+      const cardMember = card.dataset.teamMember || card.dataset.loungeTeamMember;
+      card.classList.toggle("is-speaking", cardMember === member);
     });
     playTeamSound(member);
   };
@@ -845,6 +859,19 @@
         event.preventDefault();
         openTeamTalk(card.dataset.teamMember);
       }
+    });
+  });
+
+  document.querySelectorAll("[data-lounge-team-member]").forEach((card) => {
+    const open = () => {
+      const profile = card.closest("[data-studio-lounge-slot='team']")?.querySelector("[data-lounge-team-profile]");
+      openTeamTalk(card.dataset.loungeTeamMember, false, profile);
+    };
+    card.addEventListener("click", open);
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      open();
     });
   });
 

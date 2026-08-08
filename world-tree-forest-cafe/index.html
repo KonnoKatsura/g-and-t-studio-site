@@ -468,34 +468,6 @@
       })();
     </script>
     <script src="./public/cursor-trails.js"></script>
-    <script>
-      (() => {
-        const button = document.querySelector(".bgmButton");
-        const audio = new Audio("./public/audio/glimmerpou_BGM.mp3");
-        audio.loop = true;
-        audio.volume = 0.62;
-
-        function updateButton(isPlaying) {
-          button.classList.toggle("isPlaying", isPlaying);
-          button.setAttribute("aria-label", isPlaying ? "BGMを止める" : "BGMを流す");
-          button.setAttribute("title", isPlaying ? "BGMを止める" : "BGMを流す");
-        }
-
-        button.addEventListener("click", async () => {
-          if (!audio.paused) {
-            audio.pause();
-            updateButton(false);
-            return;
-          }
-
-          try {
-            await audio.play();
-            updateButton(true);
-          } catch (error) {
-            updateButton(false);
-          }
-        });
-      })();
-    </script>
+    <script src="./public/wtfc-bgm.js"></script>
   </body>
 </html>

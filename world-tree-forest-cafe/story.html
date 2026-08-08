@@ -71,12 +71,6 @@
     <script src="./public/cursor-trails.js"></script>
     <script>
       (() => {
-        const button = document.querySelector(".bgmButton");
-        const audio = new Audio("./public/audio/glimmerpou_BGM_v1.mp3");
-        audio.loop = true; audio.volume = 0.58;
-        const updateButton = (playing) => { button.classList.toggle("isPlaying", playing); button.setAttribute("aria-label", playing ? "Story BGMを止める" : "Story BGMを流す"); };
-        button.addEventListener("click", async () => { if (!audio.paused) { audio.pause(); updateButton(false); return; } try { await audio.play(); updateButton(true); } catch { updateButton(false); } });
-
         const tabs = [...document.querySelectorAll(".historyTab")];
         const pages = [...document.querySelectorAll(".historyPage")];
         const pageFrame = document.querySelector(".historyPages");
@@ -132,5 +126,6 @@
         });
       })();
     </script>
+    <script src="./public/wtfc-bgm.js"></script>
   </body>
 </html>
