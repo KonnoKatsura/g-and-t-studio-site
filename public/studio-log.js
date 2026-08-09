@@ -462,6 +462,12 @@
         ["statusWorking", "🤖 G", "g-and-t-knowledge初期運用"],
         ["statusDone", "🌐 G&T Studio", "2026.08.08 プレオープン"],
       ],
+      9: [
+        ["statusWorking", "👩 T", "公開後確認とWorkspaceでの制作"],
+        ["statusWorking", "💻 こーちゃん", "Workspace照合・HP修正・工房接続"],
+        ["statusWorking", "🧚 クコちゃん", "Workspaceと外付けの整理準備"],
+        ["statusWorking", "🤖 G", "共通方針とAI連携の確認"],
+      ],
     },
   };
 
@@ -513,7 +519,7 @@
     const year = 2026;
     const daysInMonth = new Date(year, month, 0).getDate();
     const mondayOffset = (new Date(year, month - 1, 1).getDay() + 6) % 7;
-    const defaultDay = month === 8 ? 8 : 22;
+    const defaultDay = month === 8 ? 9 : 22;
     const cells = [];
 
     for (let index = 0; index < mondayOffset; index += 1) {

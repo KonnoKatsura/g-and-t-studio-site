@@ -285,26 +285,29 @@
     <script>
       (() => {
         const storageKey = "gt-studio-visit-count";
-        const epochKey = `${storageKey}-epoch`;
-        const preopenEpoch = "2026-08-01";
-        const preopenAt = new Date("2026-08-01T00:00:00+09:00").getTime();
-        let count;
+        const versionKey = `${storageKey}-version`;
+        const version = "2";
+        const baseCount = 320;
+        const storedCount = Number.parseInt(window.localStorage.getItem(storageKey) || "", 10);
+        const legacyEpoch = window.localStorage.getItem(`${storageKey}-epoch`);
+        const isLegacyResetCount = legacyEpoch && window.localStorage.getItem(versionKey) !== version;
+        const currentCount = Number.isFinite(storedCount)
+          ? isLegacyResetCount
+            ? baseCount + storedCount
+            : storedCount
+          : baseCount;
+        const count = Math.max(baseCount, currentCount) + 1;
 
-        if (Date.now() >= preopenAt && window.localStorage.getItem(epochKey) !== preopenEpoch) {
-          window.localStorage.setItem(epochKey, preopenEpoch);
-          window.localStorage.setItem(storageKey, "0");
-          count = 0;
-        } else {
-          count = Number(window.localStorage.getItem(storageKey) || 320) + 1;
-          window.localStorage.setItem(storageKey, String(count));
-        }
+        window.localStorage.setItem(storageKey, String(count));
+        window.localStorage.setItem(versionKey, version);
+        window.localStorage.removeItem(`${storageKey}-epoch`);
 
         document.querySelectorAll("[data-visitor-count]").forEach((counter) => {
           counter.textContent = String(count).padStart(6, "0");
-          if ([10, 50, 100, 111, 333, 555, 777, 1000].includes(count)) {
+          if ([10, 50].includes(count) || count % 100 === 0 || /^(\d)\1{2,}$/.test(String(count))) {
             const milestone = document.createElement("span");
             milestone.className = "counterMilestone";
-            milestone.textContent = "KIRIBAN! 森の灯りが揺れました";
+            milestone.textContent = `KIRIBAN ${String(count).padStart(6, "0")}! 森の灯りが揺れました`;
             counter.after(milestone);
           }
         });
