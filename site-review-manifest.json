@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "kind": "gt-public-site-review-manifest",
+  "site": {
+    "name": "G&T Studio",
+    "canonical_url": "https://konnokatsura.github.io/g-and-t-studio-site/",
+    "manifest_url": "https://konnokatsura.github.io/g-and-t-studio-site/site-review-manifest.json"
+  },
+  "policy": {
+    "live_url_required": true,
+    "local_repo_only_is_not_a_live_review": true,
+    "inference_without_live_access_is_not_allowed": true,
+    "if_access_fails": [
+      "未確認と明記する",
+      "見られない理由を報告する",
+      "必要な恒久確認ルートを提案する"
+    ]
+  },
+  "reviewers": ["T", "G", "こーちゃん", "くーちゃん", "クコちゃん"],
+  "pages": [
+    {
+      "id": "top",
+      "title": "G&T Studio",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/",
+      "priority": 1,
+      "focus": ["入口の分かりやすさ", "主要導線", "OGP", "モバイル表示"]
+    },
+    {
+      "id": "world-tree",
+      "title": "World Tree Forest Cafe",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/world-tree-forest-cafe/",
+      "priority": 1,
+      "focus": ["世界観入口", "ページ移動", "音楽と映像", "モバイル表示"]
+    },
+    {
+      "id": "shiro",
+      "title": "Shiro's Atelier",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/shiro.html",
+      "priority": 1,
+      "focus": ["各部屋への導線", "YouTubeとnote", "BGM", "画像表示"]
+    },
+    {
+      "id": "music",
+      "title": "Listening Room",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/music.html",
+      "priority": 1,
+      "focus": ["再生操作", "作品情報", "公開コピー反映", "モバイル表示"]
+    },
+    {
+      "id": "ai-lab",
+      "title": "AI Lab",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/ai-lab.html",
+      "priority": 1,
+      "focus": ["初見での意味", "カード優先順位", "Tools導線", "重複機能"]
+    },
+    {
+      "id": "studio-log",
+      "title": "Studio Log",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/notes.html",
+      "priority": 2,
+      "focus": ["今日の更新", "展開操作", "リンク先", "内部向け文言の露出"]
+    },
+    {
+      "id": "gallery",
+      "title": "G&T 展示室",
+      "url": "https://konnokatsura.github.io/g-and-t-studio-site/gallery.html",
+      "priority": 2,
+      "focus": ["展示の分類", "体験導線", "操作反応", "モバイル表示"]
+    }
+  ],
+  "report": {
+    "slack_channel": "#ai-team-handoff",
+    "parent_label": "[報告] 公開サイト確認",
+    "required_fields": [
+      "確認日時",
+      "実際に開いたURL",
+      "確認ページ",
+      "確認環境（PC / Mobile相当）",
+      "表示できた / できない",
+      "気づいた点（最大3件）"
+    ],
+    "optional_fields": ["実装提案"],
+    "completion_rule": "5名全員の実見またはアクセス不能報告が揃うまで未完了"
+  }
+}
