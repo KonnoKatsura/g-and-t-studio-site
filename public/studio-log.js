@@ -468,6 +468,13 @@
         ["statusWorking", "🧚 クコちゃん", "Workspaceと外付けの整理準備"],
         ["statusWorking", "🤖 G", "共通方針とAI連携の確認"],
       ],
+      10: [
+        ["statusWorking", "👩 T", "必要なSuno素材を選定"],
+        ["statusWorking", "💻 こーちゃん", "Handoffと安全境界を整備"],
+        ["statusWorking", "🤖 G", "8月16日までの進行を確認"],
+        ["statusWorking", "🧚 クコちゃん", "read-only棚卸しを継続"],
+        ["statusHold", "🧸 くーちゃん", "独立UI試作で待機"],
+      ],
     },
   };
 
@@ -519,7 +526,7 @@
     const year = 2026;
     const daysInMonth = new Date(year, month, 0).getDate();
     const mondayOffset = (new Date(year, month - 1, 1).getDay() + 6) % 7;
-    const defaultDay = month === 8 ? 9 : 22;
+    const defaultDay = month === 8 ? 10 : 22;
     const cells = [];
 
     for (let index = 0; index < mondayOffset; index += 1) {
@@ -1087,6 +1094,7 @@
     const name = capsuleStation.querySelector("[data-capsule-name]");
     const status = capsuleStation.querySelector("[data-capsule-status]");
     const progress = capsuleStation.querySelector("[data-capsule-progress]");
+    const capsuleReady = select && brew && art && name && status && progress;
     const latteArts = {
       css: [
         ["🧵", "シロちゃん肉球ラテ", "縫い目みたいな泡で、少しだけ整いました。"],
@@ -1110,11 +1118,14 @@
       ],
     };
 
-    select.addEventListener("change", () => {
+    select?.addEventListener("change", () => {
       playCapsuleSound("select");
     });
 
-    brew.addEventListener("click", () => {
+    brew?.addEventListener("click", () => {
+      if (!capsuleReady) {
+        return;
+      }
       const key = select.value;
       const options = latteArts[key] || latteArts.css;
       const [emoji, label, description] = pick(options);
