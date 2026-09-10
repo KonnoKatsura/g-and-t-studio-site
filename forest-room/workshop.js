@@ -68,6 +68,7 @@ function openExternalAfterSound(url) {
 }
 window.roomAction = key => {
   playSoftActionSound();
+  if (key === 'latte') { window.dispatchEvent(new CustomEvent('roombrew')); return; }
   if (key === 'record') { window.setTimeout(window.openRoomPanel, 90); return; }
   const url = safeLink(content.links[key]);
   if (url) openExternalAfterSound(url);
