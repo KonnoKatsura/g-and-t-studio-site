@@ -33,10 +33,32 @@ function setLinks() {
   }
 }
 document.querySelector('#record-subtitle').textContent = content.recordSubtitle || '世界樹の森';
+let videoFrame = null;
+const videoId = /^[A-Za-z0-9_-]{11}$/.test(content.recordVideo?.youtubeId || '') ? content.recordVideo.youtubeId : null;
+if (videoId) {
+  const container = document.createElement('div');
+  videoFrame = document.createElement('iframe');
+  videoFrame.title = content.recordVideo.title;
+  videoFrame.allow = 'encrypted-media; picture-in-picture; fullscreen';
+  videoFrame.allowFullscreen = true;
+  videoFrame.referrerPolicy = 'strict-origin-when-cross-origin';
+  videoFrame.style.cssText = 'display:block;width:100%;aspect-ratio:16/9;border:0';
+  const link = document.createElement('a');
+  link.href = `https://www.youtube.com/watch?v=${videoId}`;
+  link.target = '_blank'; link.rel = 'noopener noreferrer';
+  link.textContent = 'YouTubeで開く';
+  container.append(videoFrame, link);
+  document.querySelector('#record-subtitle').after(container);
+  for (const id of ['track-list', 'now-playing', 'record-progress-row', 'record-controls', 'audio-message']) document.getElementById(id).hidden = true;
+}
 window.openRoomPanel = () => {
   if (panel.open) return;
   window.roomUI.paused = true;
   panel.showModal();
+  if (videoFrame) {
+    silenceBackground();
+    videoFrame.src = `https://www.youtube-nocookie.com/embed/${videoId}?playsinline=1`;
+  }
 };
 function playSoftActionSound() {
   const Context = window.AudioContext || window.webkitAudioContext;
@@ -75,7 +97,10 @@ window.roomAction = key => {
 };
 for (const button of document.querySelectorAll('[data-record]')) button.onclick = () => window.roomAction('record');
 for (const id of ['close-panel', 'back-room']) document.getElementById(id).onclick = () => panel.close();
-panel.addEventListener('close', () => { window.roomUI.paused = false; });
+panel.addEventListener('close', () => {
+  window.roomUI.paused = false;
+  if (videoFrame) { videoFrame.removeAttribute('src'); resumeBackground(); }
+});
 window.showRoomFallback = text => {
   window.roomUI.flat = true;
   document.body.classList.add('flat-mode');
@@ -140,6 +165,7 @@ class ForestAmbience {
 function usesProceduralAmbience() { return content.bgm.mode === 'procedural'; }
 function silenceBackground() { backgroundRequest++; background.pause(); ambience?.stop(); }
 async function resumeBackground() {
+  if (videoFrame && panel.open) return;
   const request = ++backgroundRequest;
   if (!backgroundWanted || !record.paused) return;
   if (usesProceduralAmbience()) {
