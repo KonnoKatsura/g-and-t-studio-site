@@ -98,7 +98,7 @@ Promise.all(['machine','mug'].map(name=>new GLTFLoader().loadAsync(`./assets/cof
   scene.add(root);
 }).catch(error=>console.warn('Latte machine could not load',error));
 addHitBox('latte',1.95,1.12,-1.18,.53,.65,.55);
-window.addEventListener('roombrew',()=>{if(latte.root&&latte.startedAt<0){latte.startedAt=performance.now();lightAction('latte',false)}});
+window.addEventListener('roombrew',()=>{if(latte.root&&latte.startedAt<0){latte.startedAt=performance.now();lightAction('latte',false);window.dispatchEvent(new CustomEvent('roombrewstarted'))}});
 function animateLatte(now){
   if(latte.startedAt<0)return;
   const elapsed=(now-latte.startedAt)/1000;

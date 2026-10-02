@@ -24,10 +24,38 @@
     wait_for_update: 500,
   });
 
-  function loadAnalytics() {
-    if (document.querySelector(`script[data-gt-ga4="${measurementId}"]`)) return;
+  let currentConsent = getConsent();
+  const roomActions = Object.freeze({
+    note: ['room_link_click', 'notebook'],
+    youtube: ['room_link_click', 'monitor'],
+    shiro: ['room_link_click', 'pink_mug'],
+    aiLab: ['room_link_click', 'television'],
+    gallery: ['room_link_click', 'sofa'],
+    music: ['room_link_click', 'record_shelf'],
+    itch: ['room_link_click', 'controller'],
+    booth: ['room_link_click', 'moon_cup'],
+    studio: ['room_link_click', 'wooden_sign'],
+    record_youtube: ['room_link_click', 'record_panel'],
+    record: ['room_record_open', 'record_player'],
+    latte: ['room_latte_brew', 'latte_machine'],
+  });
+  window.addEventListener('message', (event) => {
+    const frame = document.querySelector('iframe[title="G&T Studio Forest Room"]');
+    if (!frame || event.source !== frame.contentWindow || event.origin !== window.location.origin) return;
+    if (currentConsent !== 'granted' || getConsent() !== 'granted') return;
+    const data = event.data;
+    if (!data || data.type !== 'gt-forest-room-action' || typeof data.action !== 'string') return;
+    if (!Object.prototype.hasOwnProperty.call(roomActions, data.action)) return;
+    const [name, objectId] = roomActions[data.action];
+    window.gtag('event', name, {
+      object_id: objectId,
+      ...(name === 'room_link_click' ? { destination: data.action } : {}),
+    });
+  });
 
+  function loadAnalytics() {
     window.gtag("consent", "update", { analytics_storage: "granted" });
+    if (document.querySelector(`script[data-gt-ga4="${measurementId}"]`)) return;
     if (!isProduction) {
       document.documentElement.dataset.gtAnalyticsPreview = "granted";
       return;
@@ -45,6 +73,7 @@
   }
 
   function setConsent(value) {
+    currentConsent = value;
     try {
       window.localStorage.setItem(storageKey, value);
     } catch {
